@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icones/html5-iconepng.png" type="image/x-icon">
+    <title>Links</title>
+    <style>
+        a {
+            color: purple;
+            text-decoration: none;
+        }
+
+        a:active {
+            color: yellow;
+        }
+
+        a:visited {
+            color: rgb(30, 27, 31);
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: darkgoldenrod;
+        }
+
+        a::before {
+            content: ' ➪ ';
+        }
+
+        a::after {
+            content: ' [link]';
+            color: lavender;
+            text-decoration: none;
+            font-weight: normal;
+        }
+
+        .especial:hover {
+            background-color: bisque;
+        }
+
+        .especial::after {
+            content: ' [link] especial';
+        }
+
+        .example {
+            text-decoration-line: underline;
+            text-decoration-style: wavy;
+            text-decoration-color: red;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li><a href="https://gustavoguanabara.github.io/" target="_blank" rel="external">Repositório GitHub</a></li>
+        <li><a href="https://www.youtube.com/@CursoemVideo" target="_blank" rel="external">Canal YouTube</a></li>
+        <li><a href="https://www.cursoemvideo.com/" target="_blank" rel="external" class="especial">Site</a></li>
+        <p class="example">TESTANDOOOOOOO</p>
+    </ul>
+</body>
+</html>
