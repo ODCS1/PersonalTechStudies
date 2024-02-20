@@ -10,7 +10,7 @@ import java.util.Queue;
 // dequeue (remove elements) --> poll()
 // peek (see first element) --> peek()
 
-// A INTERFACE QUEUE EXTENDE A INTERFACE "Collection", HERDANDO ASSIM AS PROPIREDADES DEFINIDAS.
+// A INTERFACE QUEUE EXTENDE A INTERFACE "Collection", HERDANDO ASSIM AS PROPRIREDADES DEFINIDAS.
 
 public class Main {
     public static void main(String[] args) {
