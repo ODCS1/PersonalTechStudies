@@ -20,7 +20,7 @@ public class Main {
 
         String fruta = stack.pop();
 
-        // stack.push(fruta);
+        stack.push(fruta);
 
         System.out.println(stack.get(stack.size() - 1));
 
