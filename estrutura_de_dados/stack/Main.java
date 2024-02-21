@@ -9,6 +9,7 @@ import java.util.Stack;
 // push() adiciona ao top
 // pop() remove do top
 
+
 public class Main {
     public static void main(String[] args) {
         Stack<String> stack = new Stack<String>();
@@ -17,9 +18,11 @@ public class Main {
         stack.push("Melancia");
         stack.push("Melão");
 
-        // String fruta = stack.pop();
+        String fruta = stack.pop();
 
         // stack.push(fruta);
+
+        System.out.println(stack.get(stack.size() - 1));
 
         System.out.println(stack.search("Melão"));
         System.out.println(stack);
