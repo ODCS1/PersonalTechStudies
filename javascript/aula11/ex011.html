@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        /* Configurações Gerais css para o html */
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background-color: #35363a;
+      }
+
+      main{
+        background-color: #787983;
+        width: 600px;
+        height: 250px;
+        border-radius: 0px 0px 5px 5px;
+        margin: auto;
+      }
+      h1 {
+        text-align: center;
+        color: black;
+      }
+      div#formu{
+        margin: 20px 10px;
+        width: 214px;
+        height: 20px;
+        border-radius: 10px;
+      }
+      input[type='text']{
+        border-radius: 10px;
+        border: none;
+        height: 20px;
+        text-align: center;
+      }
+      input[type='button']{
+        margin: 10px 0px 15px 15px;
+      }
+
+      div#paragrafo{
+        margin-left: 20px;
+        font-size: 1.1em;
+      }
+    </style>
+    <title>País</title>
+  </head>
+  <body>
+    <main>
+      <h1>De qual País?</h1>
+      <div id="formu">
+        <label for="ipais">País: </label>
+        <input type="text" name="pais" id="ipais" list="listp" />
+      </div>
+      <datalist id="listp">
+        <option>Brasil</option>
+        <option>Alemanha</option>
+        <option>Japão</option>
+        <option>Rússia</option>
+        <option>EUA</option>
+        <option>China</option>
+        <option>Índia</option>
+      </datalist>
+      <input type="button" value="Confirmar" onclick="clicar()"/>
+      <div id="paragrafo">
+
+      </div>
+      <script>
+        function clicar() {
+          var pais = document.querySelector('input#ipais')
+          var pais = String(pais.value)
+          var mostrar = document.getElementById('paragrafo')
+          if (pais == 'Brasil'){
+            mostrar.innerHTML = 'Você é <strong>brasileiro(a)</strong>'
+          } else{
+            mostrar.innerHTML = 'Você é <strong>estrangeiro</strong>'
+          }
+        }
+      </script>
+    </main>
+  </body>
+</html>

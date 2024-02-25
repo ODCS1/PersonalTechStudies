@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #35363a;
+      }
+      div#clique {
+        width: 200px;
+        height: 200px;
+        background-color: #00201dff;
+        border: 2px solid black;
+        text-align: center;
+        line-height: 200px;
+        color: white;
+        font-size: 1.4em;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      div#clique:hover {
+        background-color: rgb(1, 85, 77);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clique">
+      <p>Clique aqui</p>
+    </div>
+
+    <script>
+      var a =  window.document.querySelector('div#clique')
+      a.addEventListener('click', clicar)
+      a.addEventListener('mouseenter', entrar)
+      a.addEventListener('mouseout', sair)
+
+      function clicar () {
+        if (a.innerText != 'Clique Aqui') {
+          a.innerText = 'Clicou'
+        }
+      }
+      function entrar() {
+        a.innerText = 'Entrou'
+      }
+      function sair() {
+        a.innerText = 'Saiu'
+        if (a.innerText == 'Saiu') {
+          a.innerText = 'Clique Aqui'
+        }
+      }
+    </script>
+  </body>
+</html>

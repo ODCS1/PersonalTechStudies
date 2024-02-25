@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Idade</title>
+</head>
+<body>
+  <header>
+    <h1>Verificador de Idade</h1>
+  </header>
+  <main>
+      <p>
+        <label for="iano">Ano de Nascimento: </label>
+        <input type="number" name="ano" id="iano" value="2023" min="1900" max="2023">
+      </p>
+      <p>
+        Sexo:
+        <input type="radio" name="gen" id="igenm" value="h" checked>
+        <label for="igenm">Masculino</label>
+        <input type="radio" name="gen" id="igenf" value="m">
+        <label for="igenf">Feminino</label>
+      </p>
+      <button onclick="verificar()">Verificar</button>
+    <div id="conteudo">
+      Preencha os Dados acima para ver o resultado!
+    </div>
+  </main>
+  <footer>
+    <p>Feito por <a href="https://github.com/ODCS1" target="_blank">ODCS</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

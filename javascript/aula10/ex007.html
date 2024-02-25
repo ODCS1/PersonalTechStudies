@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Somando Números</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+      }
+
+      body {
+        background-color: #35363a;
+      }
+
+      main{
+        margin-left: 20px;
+      }
+
+      h1 {
+        margin: 15px 20px;
+      }
+
+      input[type="number"] {
+        border-radius: 5px;
+        font-size: 1.1em;
+        text-align: center;
+      }
+      input[type="button"], [type="reset"] {
+        padding: 3px;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Somando Valores</h1>
+      <p>
+        <label for="itxtn1">1° Número: </label>
+        <input
+          type="number"
+          name="txtn1"
+          id="itxtn1"
+          placeholder="Escolha um número"
+          maxlength="100" style="color: black;"
+        />
+      </p>
+      <br />
+      <p>
+        <label for="itxtn2">2° Número: </label>
+        <input
+          type="number"
+          name="txtn2"
+          id="itxtn2"
+          placeholder="Escolha um número"
+          maxlength="100" style="color: black;"
+        />
+      </p>
+      <br />
+      <input type="button" value="Somar" onclick="somar()" />
+      <p id="resul" style="margin-top: 10px;"></p>
+    </main>
+    <script>
+      function somar() {
+        var tn1 = window.document.getElementById("itxtn1");
+        var tn2 = window.document.querySelector("input#itxtn2");
+        var n1 = Number(tn1.value);
+        var n2 = Number(tn2.value);
+        var s = n1 + n2;
+        var r = document.querySelector("p#resul");
+        r.innerHTML = `A soma de ${n1} e ${n2} é  <strong>${s}</strong>.`;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+ <!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-image: linear-gradient(to right, #091921, #1a455b);
+        color: white;
+        font-size: 1.2em;
+      }
+      div:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Aqui vai o resultado</p>
+    <div id="msg" name="msg" class="msg">
+      <p>a</p>
+      <p>b</p>
+      <p>c</p>
+    </div>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+
+    <script>
+      // Por Marca
+      //var p1 = window.document.getElementsByTagName('p')[0]
+      // p1.style.color = 'blue'
+      //-----------------------------------------------------
+      // Por ID
+      // var d = window.document.getElementById("msg");
+      // d.style.background = 'green'
+      // d.innerText = 'Estou aguardando...'
+      //-----------------------------------------------------
+      // Por Name
+      // var d = window.document.getElementsByName('msg')[0]
+      // d.innerText = 'Olá, Mundo!'
+      //-----------------------------------------------------
+      // Por Class
+      // var d = window.document.getElementsByClassName('msg')[0]
+      // d.innerText = 'Hello, World!'
+      //-----------------------------------------------------
+      // Por Seletor
+      var d = window.document.querySelector('div#msg')
+      // d.innerText = 'Hi'
+      d.style.color = 'red'
+      d.style.background = 'lightgrey'
+      d.style.display = 'flex'
+      d.style.flexDirection = 'row'
+      d.style.gap = '20px'
+    </script>
+  </body>
+</html>
