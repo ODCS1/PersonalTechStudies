@@ -1,0 +1,1 @@
+print('O nome é,' '\033[7;m', 'Guanabara', '\033[m', '!!!')
