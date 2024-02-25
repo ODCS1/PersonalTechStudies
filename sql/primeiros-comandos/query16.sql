@@ -1,0 +1,12 @@
+-- LEFT OUTER JOIN
+
+-- ABREVIADO PARA LEFT JOIN
+
+-- EXEMPLO
+
+SELECT *
+FROM Person.Person PP
+LEFT JOIN Sales.PersonCreditCard PC ON PP.BusinessEntityID = PC.BusinessEntityID
+WHERE PC.BusinessEntityID IS NULL
+-- INEER JOIN : 19118
+-- LEFT JOIN : 19972
