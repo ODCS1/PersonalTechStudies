@@ -1,0 +1,47 @@
+##  ESTRUTURA DE DADOS  ##
+
+As estruturas de dados, é um modo particular de armazenar e organizar dados de modo que possam ser usados eficientemente, facilitando sua busca e modificação.
+
+
+---- LISTA LIGADA ----
+
+Coleção ordenada de valores onde cada elemento aponta para o próximo.
+
+
+---- Array ----
+
+Coleção de elementos que podem ser identificados por um índice.
+
+
+---- Fila (Queue) ----
+
+Coleção de elementos onde o primeiro elemento a ser retirado deve ser o primeiro elemento adicionado.
+
+
+Também chamadas de listas FIFO (First-in / first-out)
+
+Que indica o primeiro a entrar é o primeiro a sair.
+
+
+
+---- Pilha (Stack) ----
+
+Coleção de elementos onde o primeiro elemento a ser retirado deve ser o último elemento adicionado.
+
+Também chamadas de listas LIFO (last-in / first-out)
+
+Que indica o último a entrar é o primeiro a sair
+
+
+---- Árvore (Tree) ----
+
+Conjunto de elementos chamados de nós (ou nodes) organizados em estrutura hierárquica (não sequencial), ou seja, podendo estar "abaixo" ou "acima" de outro nós.
+
+Pense em uma árvore genealógica, na estrutura das pastas no seu computador ou na estrutura de uma página HTML.
+
+
+
+#### ESTRUTA DE DADOS NO JAVASCRIPT ####
+
+- Listas (Arrays)
+- Dicionários (Objetos)
