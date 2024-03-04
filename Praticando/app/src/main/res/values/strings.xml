@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Praticando</string>
+    <string name="c_btn_text">CLIQUE AQUI</string>
+    <string name="texto">MUDE CLICANDO NO BOTÃO</string>
+</resources>
