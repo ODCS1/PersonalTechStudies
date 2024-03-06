@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Teste</string>
+    <string name="txt_btnAvancar">Próximo</string>
+    <string name="txt1">TELA 1</string>
+    <string name="txt2">TELA 2</string>
+    <string name="txt3">TELA 3</string>
+    <string name="txt_btnVoltar">Voltar</string>
+</resources>
