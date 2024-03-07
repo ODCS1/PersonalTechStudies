@@ -4,7 +4,7 @@ import java.util.Queue;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
-public class pq {
+public class Pq {
     public static void main(String args[]) {
         Queue<String> nomes = new PriorityQueue<>(Collections.reverseOrder());
 
