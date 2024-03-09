@@ -1,9 +1,5 @@
 package praticando.p014;
 
-package meuJavaQuerido;
-
-import java.util.Objects;
-
 public class Product {
     private int id;
     private String name;
