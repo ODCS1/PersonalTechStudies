@@ -1,4 +1,4 @@
-package java.praticando.p015;
+package praticando.p015;
 
 public class Pessoa {
     private String nome;
