@@ -3,4 +3,5 @@
     <string name="texto_teste">Qualquer coisa</string>
     <string name="texto_btnVoltar">Voltar Tela</string>
     <string name="textoP" />
+    <string name="txt1">TELA 1 - BINDING</string>
 </resources>
