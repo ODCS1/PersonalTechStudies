@@ -40,11 +40,16 @@ class MainActivity : AppCompatActivity() {
         b = ActivityMainBinding.inflate(layoutInflater)
         setContentView(b.root)
 
+        val i = Intent(this, telaAbrir::class.java)
+
+        i.putExtra("filme", "The Witcher")
+        i.putExtra("classificacao", 5)
+        i.putExtra("avaliacoes", 9.2)
 
         b.btnMostrar.setOnClickListener{
             b.textoPrincipal.text = "CLICOU!!!"
 
-            startActivity(Intent(this, telaAbrir::class.java))
+            startActivity( i )
         }
     }
 

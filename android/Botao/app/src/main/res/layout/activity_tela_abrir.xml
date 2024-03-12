@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".telaAbrir">
 
+
+
     <Button
         android:id="@+id/btn_voltar"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,5 +25,20 @@
 
         android:onClick="voltarTela"
     />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="@id/btn_voltar"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="176dp"
+        tools:layout_editor_absoluteY="103dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
