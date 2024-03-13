@@ -29,8 +29,6 @@ class telaAbrir : AppCompatActivity() {
 
             val result = "Filme: $filme - Classificação: $classificacao - Avaliações: $avaliacoes"
 
-
-
             txt.text = result
         }
 
