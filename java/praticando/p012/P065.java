@@ -2,6 +2,39 @@ package praticando.p012;
 
 import java.util.Arrays;
 
+
+
+
+
+
+// n ônibus
+// m passageiros
+// buses[] é uma lista para o horário dos ônibus
+// passengers é uma lista para o horário que o passageiro chega no ponto de ônibus
+
+// 1° ETAPA: ordenar os dois vetores
+// 2° ETAPA: usar busca binária para entrar a posição válida
+// 3° ETAPA: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 public class P065 {
     public static int ultimoHorario(int[] buses, int[] passengers, int capacity) {
         Arrays.sort(buses);
@@ -44,8 +77,11 @@ public class P065 {
     }
 
     public static void main(String[] args) {
-        int[] buses = {5, 8, 10};
-        int[] passengers = {2, 4, 6, 8, 10};
+        // int[] buses = {10, 20};
+        // int[] passengers = {2, 17, 18, 19};
+
+        int[] buses = {20,30,10};
+        int[] passengers = {19,13,26,4,25,11,21};
         int capacity = 2;
         System.out.println(ultimoHorario(buses, passengers, capacity));
     }
