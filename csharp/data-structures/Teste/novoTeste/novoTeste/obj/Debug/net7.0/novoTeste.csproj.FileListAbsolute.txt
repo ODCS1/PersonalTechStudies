@@ -1,0 +1,15 @@
+/Users/u23505/Documents/GitHub/MeusEstudos/csharp/data-structures/Teste/novoTeste/novoTeste/bin/Debug/net7.0/novoTeste
+/Users/u23505/Documents/GitHub/MeusEstudos/csharp/data-structures/Teste/novoTeste/novoTeste/bin/Debug/net7.0/novoTeste.deps.json
+/Users/u23505/Documents/GitHub/MeusEstudos/csharp/data-structures/Teste/novoTeste/novoTeste/bin/Debug/net7.0/novoTeste.runtimeconfig.json
+/Users/u23505/Documents/GitHub/MeusEstudos/csharp/data-structures/Teste/novoTeste/novoTeste/bin/Debug/net7.0/novoTeste.dll
+/Users/u23505/Documents/GitHub/MeusEstudos/csharp/data-structures/Teste/novoTeste/novoTeste/bin/Debug/net7.0/novoTeste.pdb
+/Users/u23505/Documents/GitHub/MeusEstudos/csharp/data-structures/Teste/novoTeste/novoTeste/obj/Debug/net7.0/novoTeste.csproj.AssemblyReference.cache
+/Users/u23505/Documents/GitHub/MeusEstudos/csharp/data-structures/Teste/novoTeste/novoTeste/obj/Debug/net7.0/novoTeste.GeneratedMSBuildEditorConfig.editorconfig
+/Users/u23505/Documents/GitHub/MeusEstudos/csharp/data-structures/Teste/novoTeste/novoTeste/obj/Debug/net7.0/novoTeste.AssemblyInfoInputs.cache
+/Users/u23505/Documents/GitHub/MeusEstudos/csharp/data-structures/Teste/novoTeste/novoTeste/obj/Debug/net7.0/novoTeste.AssemblyInfo.cs
+/Users/u23505/Documents/GitHub/MeusEstudos/csharp/data-structures/Teste/novoTeste/novoTeste/obj/Debug/net7.0/novoTeste.csproj.CoreCompileInputs.cache
+/Users/u23505/Documents/GitHub/MeusEstudos/csharp/data-structures/Teste/novoTeste/novoTeste/obj/Debug/net7.0/novoTeste.dll
+/Users/u23505/Documents/GitHub/MeusEstudos/csharp/data-structures/Teste/novoTeste/novoTeste/obj/Debug/net7.0/refint/novoTeste.dll
+/Users/u23505/Documents/GitHub/MeusEstudos/csharp/data-structures/Teste/novoTeste/novoTeste/obj/Debug/net7.0/novoTeste.pdb
+/Users/u23505/Documents/GitHub/MeusEstudos/csharp/data-structures/Teste/novoTeste/novoTeste/obj/Debug/net7.0/novoTeste.genruntimeconfig.cache
+/Users/u23505/Documents/GitHub/MeusEstudos/csharp/data-structures/Teste/novoTeste/novoTeste/obj/Debug/net7.0/ref/novoTeste.dll

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Botao</string>
+    <string name="texto_teste">Qualquer coisa</string>
+    <string name="texto_btnVoltar">Voltar Tela</string>
+    <string name="textoP" />
+    <string name="txt1">TELA 1 - BINDING</string>
+    <string name="txt2" >CLICOU</string>
+</resources>
