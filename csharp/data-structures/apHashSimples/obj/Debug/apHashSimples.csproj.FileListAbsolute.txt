@@ -1,0 +1,7 @@
+C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\data-structures\apHashSimples\bin\Debug\apHashSimples.exe.config
+C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\data-structures\apHashSimples\bin\Debug\apHashSimples.exe
+C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\data-structures\apHashSimples\bin\Debug\apHashSimples.pdb
+C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\data-structures\apHashSimples\obj\Debug\apHashSimples.csproj.AssemblyReference.cache
+C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\data-structures\apHashSimples\obj\Debug\apHashSimples.csproj.CoreCompileInputs.cache
+C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\data-structures\apHashSimples\obj\Debug\apHashSimples.exe
+C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\data-structures\apHashSimples\obj\Debug\apHashSimples.pdb
