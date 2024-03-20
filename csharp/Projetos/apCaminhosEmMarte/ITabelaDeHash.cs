@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace apCaminhosEmMarte
 {
-    internal interface ITabelaDeHash<Tipo>
-    {
-        void Inserir(Tipo chave);
-        bool Remover(Tipo chave);
-        bool Existe(Tipo chave, out int onde);
-        List<Tipo> Conteudo();
-    }
+  internal interface ITabelaDeHash<Tipo>
+      where Tipo : IRegistro<Tipo>
+  {
+    void Inserir(Tipo item);
+    bool Remover(Tipo item);
+    bool Existe(Tipo item, out int onde);
+    List<Tipo> Conteudo();
+  }
 }

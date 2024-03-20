@@ -10,36 +10,18 @@ using System.Windows.Forms;
 
 namespace apCaminhosEmMarte
 {
-    public partial class fmrCaminhos : Form
+  public partial class FrmCaminhos : Form
+  {
+    public FrmCaminhos()
     {
-        public fmrCaminhos()
-        {
-            InitializeComponent();
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnLerArquivo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnInserir_Click(object sender, EventArgs e)
-        {
-
-        }
+      InitializeComponent();
     }
+
+    BucketHash<Cidade> tabela;
+
+    private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+    {
+
+    }
+  }
 }

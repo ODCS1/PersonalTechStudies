@@ -1,0 +1,7 @@
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Hash\apBucketHash\bin\Debug\apBucketHash.exe.config
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Hash\apBucketHash\bin\Debug\apBucketHash.exe
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Hash\apBucketHash\bin\Debug\apBucketHash.pdb
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Hash\apBucketHash\obj\Debug\apBucketHash.csproj.AssemblyReference.cache
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Hash\apBucketHash\obj\Debug\apBucketHash.csproj.CoreCompileInputs.cache
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Hash\apBucketHash\obj\Debug\apBucketHash.exe
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Hash\apBucketHash\obj\Debug\apBucketHash.pdb

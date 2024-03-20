@@ -6,17 +6,17 @@ using System.Windows.Forms;
 
 namespace apCaminhosEmMarte
 {
-    internal static class Program
+  internal static class Program
+  {
+    /// <summary>
+    /// Ponto de entrada principal para o aplicativo.
+    /// </summary>
+    [STAThread]
+    static void Main()
     {
-        /// <summary>
-        /// Ponto de entrada principal para o aplicativo.
-        /// </summary>
-        [STAThread]
-        static void Main()
-        {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fmrCaminhos());
-        }
+      Application.EnableVisualStyles();
+      Application.SetCompatibleTextRenderingDefault(false);
+      Application.Run(new FrmCaminhos());
     }
+  }
 }

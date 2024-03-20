@@ -2,10 +2,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Windows.Forms;
 
-
-class BucketHash<Tipo> : ITabelaDeHash<Tipo>
+  class BucketHash<Tipo> : ITabelaDeHash<Tipo>
+    where Tipo : IRegistro<Tipo>
   {
     private const int SIZE = 131; // para gerar mais colisões; o ideal é primo > 100
 
@@ -35,7 +34,7 @@ class BucketHash<Tipo> : ITabelaDeHash<Tipo>
 
     public void Inserir(Tipo item)
     {
-      int valorDeHash = Hash(item);
+      int valorDeHash = Hash(item.Chave);
       if (!dados[valorDeHash].Contains(item))
         dados[valorDeHash].Add(item);
     }
@@ -50,10 +49,10 @@ class BucketHash<Tipo> : ITabelaDeHash<Tipo>
       return true;
     }
 
-    public bool Existe(Tipo chave, out int posicao)
+    public bool Existe(Tipo item, out int posicao)
     {
-      posicao = Hash(chave);
-      return dados[posicao].Contains(chave);
+      posicao = Hash(item.Chave);
+      return dados[posicao].Contains(item);
     }
 
     public List<Tipo> Conteudo()
@@ -62,10 +61,9 @@ class BucketHash<Tipo> : ITabelaDeHash<Tipo>
       for (int i = 0; i < dados.Length; i++)
         if (dados[i].Count > 0)
         {
-          Tipo linha = $"{i,5} : ";
-          foreach (Tipo chave in dados[i])
-            linha += " | " + ItemActivation.toString();
-            saida.Add(linha);
+          string linha = $"{i,5} : ";
+          foreach (Tipo item in dados[i])
+            saida.Add(item);
         }
       return saida;
     }

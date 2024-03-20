@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EB0AE915-30D0-4BA6-B8E0-5586FF6C1A5A}</ProjectGuid>
+    <ProjectGuid>{6BFF72FC-D969-44C6-9D55-90B066379B1F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>apCaminhosEmMarte</RootNamespace>
     <AssemblyName>apCaminhosEmMarte</AssemblyName>
@@ -47,12 +47,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BucketHash.cs" />
+    <Compile Include="Cidade.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IRegistro.cs" />
     <Compile Include="ITabelaDeHash.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
