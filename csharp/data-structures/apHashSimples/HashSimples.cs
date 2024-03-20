@@ -47,7 +47,7 @@ class HashSimples
                 saida.Add($"{i,5} : {tabelaDeHash[i]}");
             //else
             // saida.Add($"{i} ");
-            return saida;
+        return saida;
     }
     
     public void Limpar()
@@ -56,6 +56,17 @@ class HashSimples
             tabelaDeHash[i] = null;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 // Este código implementa uma tabela de dispersão simples (hash table) em C#. Aqui está uma explicação detalhada do código:
 
