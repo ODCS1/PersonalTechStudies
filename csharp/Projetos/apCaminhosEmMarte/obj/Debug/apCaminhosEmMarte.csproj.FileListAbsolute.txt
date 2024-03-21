@@ -8,3 +8,13 @@ P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Projetos\ap
 P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Projetos\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.csproj.CoreCompileInputs.cache
 P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Projetos\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.exe
 P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Projetos\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.pdb
+C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\Projetos\apCaminhosEmMarte\bin\Debug\apCaminhosEmMarte.exe.config
+C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\Projetos\apCaminhosEmMarte\bin\Debug\apCaminhosEmMarte.exe
+C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\Projetos\apCaminhosEmMarte\bin\Debug\apCaminhosEmMarte.pdb
+C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\Projetos\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.csproj.AssemblyReference.cache
+C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\Projetos\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.FrmCaminhos.resources
+C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\Projetos\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.Properties.Resources.resources
+C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\Projetos\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.csproj.GenerateResource.cache
+C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\Projetos\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.csproj.CoreCompileInputs.cache
+C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\Projetos\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.exe
+C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\Projetos\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.pdb
