@@ -1,0 +1,10 @@
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Praticando\WindowsEx0001\bin\Debug\WindowsEx0001.exe.config
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Praticando\WindowsEx0001\bin\Debug\WindowsEx0001.exe
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Praticando\WindowsEx0001\bin\Debug\WindowsEx0001.pdb
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Praticando\WindowsEx0001\obj\Debug\WindowsEx0001.csproj.AssemblyReference.cache
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Praticando\WindowsEx0001\obj\Debug\WindowsEx0001.Form1.resources
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Praticando\WindowsEx0001\obj\Debug\WindowsEx0001.Properties.Resources.resources
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Praticando\WindowsEx0001\obj\Debug\WindowsEx0001.csproj.GenerateResource.cache
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Praticando\WindowsEx0001\obj\Debug\WindowsEx0001.csproj.CoreCompileInputs.cache
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Praticando\WindowsEx0001\obj\Debug\WindowsEx0001.exe
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Praticando\WindowsEx0001\obj\Debug\WindowsEx0001.pdb
