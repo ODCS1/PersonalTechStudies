@@ -8,3 +8,13 @@ C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\Projetos\Pizzaria\obj\Debug\
 C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\Projetos\Pizzaria\obj\Debug\Pizzaria.csproj.CoreCompileInputs.cache
 C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\Projetos\Pizzaria\obj\Debug\Pizzaria.exe
 C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\Projetos\Pizzaria\obj\Debug\Pizzaria.pdb
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Projetos\Pizzaria\bin\Debug\Pizzaria.exe.config
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Projetos\Pizzaria\bin\Debug\Pizzaria.exe
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Projetos\Pizzaria\bin\Debug\Pizzaria.pdb
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Projetos\Pizzaria\obj\Debug\Pizzaria.csproj.AssemblyReference.cache
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Projetos\Pizzaria\obj\Debug\Pizzaria.Form1.resources
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Projetos\Pizzaria\obj\Debug\Pizzaria.Properties.Resources.resources
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Projetos\Pizzaria\obj\Debug\Pizzaria.csproj.GenerateResource.cache
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Projetos\Pizzaria\obj\Debug\Pizzaria.csproj.CoreCompileInputs.cache
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Projetos\Pizzaria\obj\Debug\Pizzaria.exe
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Projetos\Pizzaria\obj\Debug\Pizzaria.pdb
