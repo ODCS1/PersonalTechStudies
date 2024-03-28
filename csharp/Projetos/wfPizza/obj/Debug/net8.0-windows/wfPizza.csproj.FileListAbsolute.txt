@@ -1,0 +1,16 @@
+C:\Users\andreia\source\repos\wfPizza\bin\Debug\net8.0-windows\wfPizza.exe
+C:\Users\andreia\source\repos\wfPizza\bin\Debug\net8.0-windows\wfPizza.deps.json
+C:\Users\andreia\source\repos\wfPizza\bin\Debug\net8.0-windows\wfPizza.runtimeconfig.json
+C:\Users\andreia\source\repos\wfPizza\bin\Debug\net8.0-windows\wfPizza.dll
+C:\Users\andreia\source\repos\wfPizza\bin\Debug\net8.0-windows\wfPizza.pdb
+C:\Users\andreia\source\repos\wfPizza\obj\Debug\net8.0-windows\wfPizza.frmPedido.resources
+C:\Users\andreia\source\repos\wfPizza\obj\Debug\net8.0-windows\wfPizza.csproj.GenerateResource.cache
+C:\Users\andreia\source\repos\wfPizza\obj\Debug\net8.0-windows\wfPizza.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andreia\source\repos\wfPizza\obj\Debug\net8.0-windows\wfPizza.AssemblyInfoInputs.cache
+C:\Users\andreia\source\repos\wfPizza\obj\Debug\net8.0-windows\wfPizza.AssemblyInfo.cs
+C:\Users\andreia\source\repos\wfPizza\obj\Debug\net8.0-windows\wfPizza.csproj.CoreCompileInputs.cache
+C:\Users\andreia\source\repos\wfPizza\obj\Debug\net8.0-windows\wfPizza.dll
+C:\Users\andreia\source\repos\wfPizza\obj\Debug\net8.0-windows\refint\wfPizza.dll
+C:\Users\andreia\source\repos\wfPizza\obj\Debug\net8.0-windows\wfPizza.pdb
+C:\Users\andreia\source\repos\wfPizza\obj\Debug\net8.0-windows\wfPizza.genruntimeconfig.cache
+C:\Users\andreia\source\repos\wfPizza\obj\Debug\net8.0-windows\ref\wfPizza.dll
