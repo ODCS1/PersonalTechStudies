@@ -34,14 +34,20 @@ from typing import List
 
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
+        maxSum = float("-inf")
+        sum = 0
+        for i in range(len(nums)):
+            sum += nums[i]
+            if (sum > maxSum):
+                maxSum = sum
         
+        return maxSum
         
-        pass
 
 
 
 
-vet = [1,2,3,4,5,6,7,8]
+vet = [-2,1,-3,4,-1,2,1,-5,4]
 obj = Solution()
 
 mostrar = obj.maxSubArray(vet)
