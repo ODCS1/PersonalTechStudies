@@ -4,38 +4,57 @@ import java.util.HashMap;
 public class Ex07 {
     public static void main(String[] args) {
         String[] lista = {"asd", "qwe", "qwe", "uio", "jkl","asd", "bnm"};
+        
+        System.out.println();
+        System.out.println();
 
-        containDuplicate(lista);
+        String[] listaSemRepeticao = new String[lista.length];
 
+        listaSemRepeticao = containDuplicate(lista);
 
+        System.out.print("Lista com as repetições removidas: ");
+        for (String string : listaSemRepeticao) {
+            System.out.print(string + " ");
+        }
+        System.out.println();
+        System.out.println();
+
+        System.out.print("Lista Original: ");
         for (String string : lista) {
             System.out.print(string + " ");
         }
+        System.out.println();
+        System.out.println();
+        
 
     }
 
-    private static void containDuplicate(String[] names){
+    private static String[] containDuplicate(String[] names){
         HashMap<Integer, String> map = new HashMap<>();
-        int namesLen = names.length;
-        for(int i = 0; i < namesLen; i++){
+        for(int i = 0; i < names.length; i++){
             if (map.containsValue(names[i])){
-                names = removerElemento(names, names[i]);
+                names = removerElemento(names, names[i], i);
+                i--;
             }else{
                 map.put(i, names[i]);
             }
 
         }
+        return names;
     }
 
-    private static String[] removerElemento(String[] n, String elemento){
+    private static String[] removerElemento(String[] n, String elemento, int posElemRepetido){
+
         String[] vetorNovo = new String[n.length - 1];
 
-
         for (int i = 0; i < vetorNovo.length; i++){
-            if (!n[i].equals(elemento)){
+            if (i < posElemRepetido){
                 vetorNovo[i] = n[i];
+            }else if(i >= posElemRepetido) {
+                vetorNovo[i] = n[i+1];
             }
         }
+
         return vetorNovo;
     }
 }
