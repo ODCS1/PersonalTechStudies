@@ -2,7 +2,7 @@ package praticando.p016;
 
 import java.util.Arrays;
 
-public class Ex012 {
+public class Ex13 {
     public class Product {
         private int id;
         private String name;
@@ -91,8 +91,8 @@ public class Ex012 {
         public Invoice(int id, Customer customer) {
             this.id = id;
             this.customer = customer;
-            this.products = new Product[5];
-            this.quantities = new int[5];
+            this.products = new Product[30];
+            this.quantities = new int[30];
         }
 
         public double getTotal() {
