@@ -33,7 +33,7 @@ public class Ex07 {
         HashMap<Integer, String> map = new HashMap<>();
         for(int i = 0; i < names.length; i++){
             if (map.containsValue(names[i])){
-                names = removerElemento(names, names[i], i);
+                names = removerElemento(names, i);
                 i--;
             }else{
                 map.put(i, names[i]);
@@ -43,7 +43,7 @@ public class Ex07 {
         return names;
     }
 
-    private static String[] removerElemento(String[] n, String elemento, int posElemRepetido){
+    private static String[] removerElemento(String[] n,int posElemRepetido){
 
         String[] vetorNovo = new String[n.length - 1];
 
