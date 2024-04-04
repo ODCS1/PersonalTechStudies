@@ -1,0 +1,15 @@
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Praticando\WpfEx001\bin\Debug\WpfEx001.exe.config
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Praticando\WpfEx001\bin\Debug\WpfEx001.exe
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Praticando\WpfEx001\bin\Debug\WpfEx001.pdb
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Praticando\WpfEx001\obj\Debug\WpfEx001.csproj.AssemblyReference.cache
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Praticando\WpfEx001\obj\Debug\MainWindow.g.cs
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Praticando\WpfEx001\obj\Debug\App.g.cs
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Praticando\WpfEx001\obj\Debug\WpfEx001_MarkupCompile.cache
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Praticando\WpfEx001\obj\Debug\WpfEx001_MarkupCompile.lref
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Praticando\WpfEx001\obj\Debug\MainWindow.baml
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Praticando\WpfEx001\obj\Debug\WpfEx001.g.resources
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Praticando\WpfEx001\obj\Debug\WpfEx001.Properties.Resources.resources
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Praticando\WpfEx001\obj\Debug\WpfEx001.csproj.GenerateResource.cache
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Praticando\WpfEx001\obj\Debug\WpfEx001.csproj.CoreCompileInputs.cache
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Praticando\WpfEx001\obj\Debug\WpfEx001.exe
+C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Praticando\WpfEx001\obj\Debug\WpfEx001.pdb

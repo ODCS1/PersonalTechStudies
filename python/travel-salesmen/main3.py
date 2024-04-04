@@ -1,17 +1,33 @@
-from random import choice
+from random import choice, randint
 import math
 
 n_cities = 17
 
 # MATRIZ DE DISTÂNCIAS
-distances = [[None for _ in range(17)] for _ in range(17)]
+distances = [[None for _ in range(n_cities)] for _ in range(n_cities)]
 
 
-dis = math.sqr()
+def get_position():
+    positions = [None for _ in range(n_cities)]
+    for i in range(n_cities):
+        y = randint(0, 1001)
+        x = randint(0, 1001)
+
+        positions[i] = str(x) + "," + str(y)
+    return positions
 
 
 def get_distances():
-    pass
+    vetPosi = get_position()
+
+    for l in range(n_cities):
+        for c in range(n_cities):
+            x1 = int(vetPosi[l].split(",")[0])
+            y1 = int(vetPosi[l].split(",")[1])
+            x2 = int(vetPosi[c].split(",")[0])
+            y2 = int(vetPosi[c].split(",")[1])
+            d = math.sqrt((x1-x2)**2 + (y1-y2)**2)
+            distances[l][c] = d
 
 
 # CALCULAR A DISTÂNCIA TOTAL PERCORRIDA POR UM CAMINHO
@@ -28,11 +44,12 @@ def get_total_distance(tour):
 
 # EURÍSTICA DO VIZINHO MAIS PRÓXIMO
 def random_nearest_neighbor_heuristic():
+    get_distances()
     
     # AS CIDADES QUE AINDA NÃO FORAM VISITADAS
     unvisited = list(range(0, n_cities))
     tour = [choice(unvisited)]
-    # print(id(tour))
+
     unvisited.remove(tour[0])
 
     while unvisited:
@@ -42,7 +59,7 @@ def random_nearest_neighbor_heuristic():
         unvisited.remove(next_city)
 
     return tour
-# print(type(random_nearest_neighbor_heuristic()))
+
 tour = random_nearest_neighbor_heuristic()
-# print(tour)
-print(tour, get_total_distance(tour))
+
+print(tour, "{:.2f}".format(get_total_distance(tour)))

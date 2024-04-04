@@ -1,0 +1,10 @@
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Filas\apFilaVetor\bin\Debug\apFilaVetor.exe.config
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Filas\apFilaVetor\bin\Debug\apFilaVetor.exe
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Filas\apFilaVetor\bin\Debug\apFilaVetor.pdb
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Filas\apFilaVetor\obj\Debug\apFilaVetor.csproj.AssemblyReference.cache
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Filas\apFilaVetor\obj\Debug\apFilaVetor.FrmFilaVetor.resources
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Filas\apFilaVetor\obj\Debug\apFilaVetor.Properties.Resources.resources
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Filas\apFilaVetor\obj\Debug\apFilaVetor.csproj.GenerateResource.cache
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Filas\apFilaVetor\obj\Debug\apFilaVetor.csproj.CoreCompileInputs.cache
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Filas\apFilaVetor\obj\Debug\apFilaVetor.exe
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Filas\apFilaVetor\obj\Debug\apFilaVetor.pdb
