@@ -1,0 +1,10 @@
+C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\Projetos\Horario\bin\Debug\Horario.exe.config
+C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\Projetos\Horario\bin\Debug\Horario.exe
+C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\Projetos\Horario\bin\Debug\Horario.pdb
+C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\Projetos\Horario\obj\Debug\Horario.csproj.AssemblyReference.cache
+C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\Projetos\Horario\obj\Debug\Horario.Formulario.resources
+C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\Projetos\Horario\obj\Debug\Horario.Properties.Resources.resources
+C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\Projetos\Horario\obj\Debug\Horario.csproj.GenerateResource.cache
+C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\Projetos\Horario\obj\Debug\Horario.csproj.CoreCompileInputs.cache
+C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\Projetos\Horario\obj\Debug\Horario.exe
+C:\Users\u23505\Documents\GitHub\MeusEstudos\csharp\Projetos\Horario\obj\Debug\Horario.pdb
