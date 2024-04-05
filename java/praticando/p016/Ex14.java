@@ -18,23 +18,28 @@ public class Ex14 {
             this.y = y;
             this.speed = speed;
         }
-    
+        
+        @Override
         public void moveUp() {
             this.y -= this.speed;
         }
-    
+        
+        @Override
         public void moveDown() {
             this.y += this.speed;
         }
-    
+        
+        @Override
         public void moveLeft() {
             this.x -= this.speed;
         }
-    
+        
+        @Override
         public void moveRight() {
             this.x += this.speed;
         }
 
+        @Override
         public String toString(){
             return "";
         }
