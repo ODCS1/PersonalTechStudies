@@ -28,3 +28,13 @@ C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Projetos\apCaminhosEm
 C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Projetos\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.csproj.CoreCompileInputs.cache
 C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Projetos\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.exe
 C:\Users\NB\OneDrive\Documentos\estudos\MeusEstudos\csharp\Projetos\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.pdb
+C:\Users\u23623\Documents\GitHub\MeusEstudos\csharp\Projetos\apCaminhosEmMarte\bin\Debug\apCaminhosEmMarte.exe.config
+C:\Users\u23623\Documents\GitHub\MeusEstudos\csharp\Projetos\apCaminhosEmMarte\bin\Debug\apCaminhosEmMarte.exe
+C:\Users\u23623\Documents\GitHub\MeusEstudos\csharp\Projetos\apCaminhosEmMarte\bin\Debug\apCaminhosEmMarte.pdb
+C:\Users\u23623\Documents\GitHub\MeusEstudos\csharp\Projetos\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.csproj.AssemblyReference.cache
+C:\Users\u23623\Documents\GitHub\MeusEstudos\csharp\Projetos\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.FrmCaminhos.resources
+C:\Users\u23623\Documents\GitHub\MeusEstudos\csharp\Projetos\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.Properties.Resources.resources
+C:\Users\u23623\Documents\GitHub\MeusEstudos\csharp\Projetos\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.csproj.GenerateResource.cache
+C:\Users\u23623\Documents\GitHub\MeusEstudos\csharp\Projetos\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.csproj.CoreCompileInputs.cache
+C:\Users\u23623\Documents\GitHub\MeusEstudos\csharp\Projetos\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.exe
+C:\Users\u23623\Documents\GitHub\MeusEstudos\csharp\Projetos\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.pdb

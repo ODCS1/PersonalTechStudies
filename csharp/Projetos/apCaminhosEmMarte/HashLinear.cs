@@ -10,6 +10,7 @@ namespace apCaminhosEmMarte
     where Tipo : IRegistro<Tipo>
   {
     Tipo[] dados;
+    int qtd_elementos;
     const int TAM_MAXIMO = 131;
     //int tamanho;
     
@@ -83,13 +84,13 @@ namespace apCaminhosEmMarte
 
             // OU
 
-            int pos = Hash(item.Chave);
-            return dados[pos].Equals(item);
+            onde = Hash(item.Chave);
+            return dados[onde].Equals(item);
     }
 
         public void Inserir(Tipo item)
         {
-            if (!EstaCheio)
+            if (!EstaCheio())
             {
                 int pos = Hash(item.Chave);
                 while (true)
@@ -97,6 +98,7 @@ namespace apCaminhosEmMarte
                     if (dados[pos] == null)
                     {
                         dados[pos] = item;
+                        qtd_elementos++;
                         break;
                     }
                     pos++;
@@ -106,12 +108,9 @@ namespace apCaminhosEmMarte
 
         public bool EstaCheio()
         {
-            for (int i = 0; i < dados.Length; i++)
-            {
-                if (dados[i] == default(Tipo)) return false;
-            }
 
-            return true;
+            if (qtd_elementos == TAM_MAXIMO) { return true; }
+            return false;
         }
 
         public bool Remover(Tipo item)

@@ -65,5 +65,15 @@ namespace apCaminhosEmMarte
       // para gravar seus próprios dados no arquivo
       // fechar o arquivo ao final do percurso
     }
-  }
+
+        private void btnInserir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCidade_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
