@@ -11,69 +11,192 @@ using System.Windows.Forms;
 
 namespace apCaminhosEmMarte
 {
-  public partial class FrmCaminhos : Form
-  {
-    public FrmCaminhos()
+    public partial class FrmCaminhos : Form
     {
-      InitializeComponent();
-    }
-
-    ITabelaDeHash<Cidade> tabela;
-
-    private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
-    {
-
-    }
-
-    private void btnLerArquivo_Click(object sender, EventArgs e)
-    {
-      if (dlgAbrir.ShowDialog() == DialogResult.OK)
-      {
-        if (rbBucketHash.Checked)
-           tabela = new BucketHash<Cidade>();
-        else
-          if (rbHashLinear.Checked)
-             tabela = new HashLinear<Cidade>();
-          else 
-            if (rbHashQuadratico.Checked)
-               tabela = new HashQuadratico<Cidade>();
-            else
-              if (rbHashDuplo.Checked)
-                tabela = new HashDuplo<Cidade>();
-
-        var arquivo = new StreamReader(dlgAbrir.FileName);
-        while (! arquivo.EndOfStream) 
+        public FrmCaminhos()
         {
-          Cidade umaCidade = new Cidade();
-          umaCidade.LerRegistro(arquivo);
-          tabela.Inserir(umaCidade);
+            InitializeComponent();
         }
-        lsbCidades.Items.Clear();  // limpa o listBox
-        var asCidades = tabela.Conteudo();
-        foreach (Cidade cid in asCidades)
-          lsbCidades.Items.Add(cid);
-        arquivo.Close();
-      }
-    }
 
-    private void FrmCaminhos_FormClosing(object sender, FormClosingEventArgs e)
-    {
-      // abrir o arquivo para saida, se houver um arquivo selecionado
-      // obter todo o conteúdo da tabela de hash
-      // percorrer o conteúdo da tabela de hash, acessando
-      // cada cidade individualmente e usar esse objeto Cidade
-      // para gravar seus próprios dados no arquivo
-      // fechar o arquivo ao final do percurso
-    }
+        ITabelaDeHash<Cidade> tabela;
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void btnLerArquivo_Click(object sender, EventArgs e)
+        {
+            if (dlgAbrir.ShowDialog() == DialogResult.OK)
+            {
+                if (rbBucketHash.Checked)
+                    tabela = new BucketHash<Cidade>();
+                else
+                  if (rbHashLinear.Checked)
+                    tabela = new HashLinear<Cidade>();
+                else
+                    if (rbHashQuadratico.Checked)
+                    tabela = new HashQuadratico<Cidade>();
+                else
+                      if (rbHashDuplo.Checked)
+                    tabela = new HashDuplo<Cidade>();
+
+                var arquivo = new StreamReader(dlgAbrir.FileName);
+                while (!arquivo.EndOfStream)
+                {
+                    Cidade umaCidade = new Cidade();
+                    umaCidade.LerRegistro(arquivo);
+                    tabela.Inserir(umaCidade);
+                }
+                lsbCidades.Items.Clear();  // limpa o listBox
+                var asCidades = tabela.Conteudo();
+                foreach (Cidade cid in asCidades)
+                    lsbCidades.Items.Add(cid);
+                arquivo.Close();
+            }
+        }
+
+        private void FrmCaminhos_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // abrir o arquivo para saida, se houver um arquivo selecionado
+            // obter todo o conteúdo da tabela de hash
+            // percorrer o conteúdo da tabela de hash, acessando
+            // cada cidade individualmente e usar esse objeto Cidade
+            // para gravar seus próprios dados no arquivo
+            // fechar o arquivo ao final do percurso
+        }
 
         private void btnInserir_Click(object sender, EventArgs e)
         {
+            string nome = txtCidade.Text.Trim();
+            double x, y;
 
+            if (!double.TryParse(udX.Value.ToString(), out x) || !double.TryParse(udY.Value.ToString(), out y))
+            {
+                MessageBox.Show("Por favor, insira coordenadas válidas para a cidade.");
+                return;
+            }
+
+            Cidade novaCidade = new Cidade();
+            novaCidade.NomeCidade = nome;
+            novaCidade.X = x;
+            novaCidade.Y = y;
+
+            using (StreamWriter writer = File.AppendText(dlgAbrir.FileName))
+            {
+                writer.WriteLine($"{nome}, {x}, {y}");
+            }
+
+            tabela.Inserir(novaCidade);
+
+            LimparCampos();
+            AtualizarCidade();
         }
 
-        private void txtCidade_TextChanged(object sender, EventArgs e)
-        {
 
+        private void LimparCampos()
+        {
+            txtCidade.Text = "";
+            udX.Value = 0;
+            udY.Value = 0;
+        }
+
+        private void AtualizarCidade()
+        {
+            lsbCidades.Items.Clear();
+            var cidades = tabela.Conteudo();
+            foreach (Cidade cidade in cidades)
+            {
+                lsbCidades.Items.Add(cidade);
+            }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string nomeCidade = txtCidade.Text.Trim();
+            bool encontrada = false;
+
+            var cidades = tabela.Conteudo();
+            foreach (Cidade cidade in cidades)
+            {
+                if (nomeCidade.Equals(cidade.NomeCidade, StringComparison.OrdinalIgnoreCase))
+                {
+                    encontrada = true;
+                    txtCidade.Text = cidade.NomeCidade;
+                    udX.Value = (decimal)cidade.X;
+                    udY.Value = (decimal)cidade.Y;
+                    break;
+                }
+            }
+            if (!encontrada)
+            {
+                MessageBox.Show("Cidade não localizada");
+            }
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+            string nomeCidade = txtCidade.Text.Trim();
+
+            if (string.IsNullOrEmpty(nomeCidade))
+            {
+                MessageBox.Show("Insira uma cidade para ser removida");
+                return;
+            }
+
+            bool removida = false;
+
+            foreach (Cidade cidade in tabela.Conteudo())
+            {
+                if (nomeCidade.Equals(cidade.NomeCidade, StringComparison.OrdinalIgnoreCase))
+                {
+                    if (tabela is BucketHash<Cidade>)
+                    {
+                        removida = ((BucketHash<Cidade>)tabela).Remover(cidade);
+                    }
+                    else if (tabela is HashLinear<Cidade>)
+                    {
+                        removida = ((HashLinear<Cidade>)tabela).Remover(cidade);
+                    }
+                    else if (tabela is HashQuadratico<Cidade>)
+                    {
+                        removida = ((HashQuadratico<Cidade>)tabela).Remover(cidade);
+                    }
+                    else if (tabela is HashDuplo<Cidade>)
+                    {
+                        removida = ((HashDuplo<Cidade>)tabela).Remover(cidade);
+                    }
+
+                    if (removida)
+                    {
+                        string arquivo = dlgAbrir.FileName;
+                        string[] linhas = File.ReadAllLines(arquivo);
+
+                        List<String> lista = new List<String>();
+                        foreach (string line in linhas)
+                        {
+                            if (!line.Contains(cidade.NomeCidade))
+                            {
+                                lista.Add(line);
+                            }
+                        }
+
+                        File.WriteAllLines(arquivo, linhas);
+
+                        MessageBox.Show("Cidade removida com sucesso.");
+                        LimparCampos();
+                        AtualizarCidade();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erro ao remover a cidade.");
+                    }
+
+                    return;
+                }
+            }
+
+            MessageBox.Show("Cidade não encontrada na tabela de hash.");
         }
     }
 }
