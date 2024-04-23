@@ -9,17 +9,15 @@ namespace apCaminhosEmMarte
   public class HashLinear<Tipo> : ITabelaDeHash<Tipo>
     where Tipo : IRegistro<Tipo>
   {
-    Tipo[] dados;
-    int qtd_elementos;
-    const int TAM_MAXIMO = 131;
-    //int tamanho;
+        Tipo[] dados;
+        int qtd_elementos;
+        const int TAM_MAXIMO = 131;
     
 
-    public HashLinear()
-    {
-        //tamanho = TAM_MAXIMO;
-        dados = new Tipo[TAM_MAXIMO];
-    }
+        public HashLinear()
+        {
+            dados = new Tipo[TAM_MAXIMO];
+        }
 
 
         public int Hash(string chave)
@@ -28,7 +26,7 @@ namespace apCaminhosEmMarte
             // ESSE LOOP É PARA ENCONTRAR O VALOR DE HASH PARA UMA CHAVE JÁ ARMAZENADA
             for (int i = 0; i < dados.Length; i++)
             {
-                if (chave.Equals(dados[i].Chave)) { return i; }
+                if ((dados[i] != null) && (chave.Equals(dados[i].Chave))) { return i; }
             }
 
             // PARA CHAVES AINDA NÃO ARMAZENADAS
@@ -70,39 +68,18 @@ namespace apCaminhosEmMarte
         }
 
         public bool Existe(Tipo item, out int onde)
-    {
-            //onde = -1;
-            // for (int i = 0;i < tamanho; i++)
-            //{
-            //    if (dados[i].Equals(item))
-            //        onde = i;
-            //        return true;
-            //}
-
-            //return false;
-
-
-            // OU
-
+        {
             onde = Hash(item.Chave);
             return dados[onde].Equals(item);
-    }
+        }
 
         public void Inserir(Tipo item)
         {
             if (!EstaCheio())
             {
                 int pos = Hash(item.Chave);
-                while (true)
-                {
-                    if (dados[pos] == null)
-                    {
-                        dados[pos] = item;
-                        qtd_elementos++;
-                        break;
-                    }
-                    pos++;
-                }
+                dados[pos] = item;
+                qtd_elementos++;
             }
         }
 

@@ -1,22 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\vitor\\Documents\\GitHub\\MeusEstudos\\csharp\\Projetos\\apCaminhosEmMarte\\",
+  "WorkspaceRootPath": "C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Projetos\\apCaminhosEmMarte\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6BFF72FC-D969-44C6-9D55-90B066379B1F}|apCaminhosEmMarte.csproj|c:\\users\\vitor\\documents\\github\\meusestudos\\csharp\\projetos\\apcaminhosemmarte\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BFF72FC-D969-44C6-9D55-90B066379B1F}|apCaminhosEmMarte.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Projetos\\apCaminhosEmMarte\\HashQuadratico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HashQuadratico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BFF72FC-D969-44C6-9D55-90B066379B1F}|apCaminhosEmMarte.csproj|c:\\users\\vitor\\documents\\github\\meusestudos\\csharp\\projetos\\apcaminhosemmarte\\cidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BFF72FC-D969-44C6-9D55-90B066379B1F}|apCaminhosEmMarte.csproj|solutionrelative:cidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BFF72FC-D969-44C6-9D55-90B066379B1F}|apCaminhosEmMarte.csproj|c:\\users\\vitor\\documents\\github\\meusestudos\\csharp\\projetos\\apcaminhosemmarte\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6BFF72FC-D969-44C6-9D55-90B066379B1F}|apCaminhosEmMarte.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BFF72FC-D969-44C6-9D55-90B066379B1F}|apCaminhosEmMarte.csproj|C:\\Users\\vitor\\Documents\\GitHub\\MeusEstudos\\csharp\\Projetos\\apCaminhosEmMarte\\BucketHash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BFF72FC-D969-44C6-9D55-90B066379B1F}|apCaminhosEmMarte.csproj|solutionrelative:BucketHash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Projetos\\apCaminhosEmMarte\\HashLinear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HashLinear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,57 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Cidade.cs",
-              "DocumentMoniker": "C:\\Users\\vitor\\Documents\\GitHub\\MeusEstudos\\csharp\\Projetos\\apCaminhosEmMarte\\Cidade.cs",
-              "RelativeDocumentMoniker": "Cidade.cs",
-              "ToolTip": "C:\\Users\\vitor\\Documents\\GitHub\\MeusEstudos\\csharp\\Projetos\\apCaminhosEmMarte\\Cidade.cs",
-              "RelativeToolTip": "Cidade.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAYwDMAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T21:18:34.867Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\vitor\\Documents\\GitHub\\MeusEstudos\\csharp\\Projetos\\apCaminhosEmMarte\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\vitor\\Documents\\GitHub\\MeusEstudos\\csharp\\Projetos\\apCaminhosEmMarte\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T21:13:49.548Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\vitor\\Documents\\GitHub\\MeusEstudos\\csharp\\Projetos\\apCaminhosEmMarte\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\vitor\\Documents\\GitHub\\MeusEstudos\\csharp\\Projetos\\apCaminhosEmMarte\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAGAAAAAAAAAAAAAYwIQAAAA5AAAA",
+              "Title": "HashQuadratico.cs",
+              "DocumentMoniker": "C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Projetos\\apCaminhosEmMarte\\HashQuadratico.cs",
+              "RelativeDocumentMoniker": "HashQuadratico.cs",
+              "ToolTip": "C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Projetos\\apCaminhosEmMarte\\HashQuadratico.cs",
+              "RelativeToolTip": "HashQuadratico.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T19:20:46.409Z",
+              "WhenOpened": "2024-04-23T18:45:48.273Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BucketHash.cs",
-              "DocumentMoniker": "C:\\Users\\vitor\\Documents\\GitHub\\MeusEstudos\\csharp\\Projetos\\apCaminhosEmMarte\\BucketHash.cs",
-              "RelativeDocumentMoniker": "BucketHash.cs",
-              "ToolTip": "C:\\Users\\vitor\\Documents\\GitHub\\MeusEstudos\\csharp\\Projetos\\apCaminhosEmMarte\\BucketHash.cs",
-              "RelativeToolTip": "BucketHash.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAswDAAAAASAAAA",
+              "DocumentIndex": 1,
+              "Title": "HashLinear.cs",
+              "DocumentMoniker": "C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Projetos\\apCaminhosEmMarte\\HashLinear.cs",
+              "RelativeDocumentMoniker": "HashLinear.cs",
+              "ToolTip": "C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Projetos\\apCaminhosEmMarte\\HashLinear.cs",
+              "RelativeToolTip": "HashLinear.cs",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAAAGQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T17:06:40.104Z",
+              "WhenOpened": "2024-04-23T18:37:39.581Z",
               "EditorCaption": ""
             }
           ]
