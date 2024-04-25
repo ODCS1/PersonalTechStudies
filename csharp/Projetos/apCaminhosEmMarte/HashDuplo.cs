@@ -14,7 +14,7 @@ namespace apCaminhosEmMarte
         const int TAM_MAXIMO = 131;
 
 
-        public HashQuadratico()
+        public HashDuplo()
         {
             dados = new Tipo[TAM_MAXIMO];
         }

@@ -39,7 +39,7 @@ namespace apCaminhosEmMarte
                 tot += dados.Length;
 
             int primeiraPosicao = (int)tot;
-            float posicaoAtual = (float) primeiraPosicao;
+            double posicaoAtual = (double) primeiraPosicao;
             int contadorColisao = 0;
 
 
