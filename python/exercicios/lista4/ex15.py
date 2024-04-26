@@ -18,6 +18,6 @@ for i in range(len(lista)):
 
     if contadorSequenciaAtual == len(sequencia):
         posAtualSequencia, contadorSequenciaAtual = 0, 0
-        posFinalSequencia = max(posFinalSequencia, i)
+        posFinalSequencia = i
 
 print(f"Posição Final da sequência: {posFinalSequencia}")
