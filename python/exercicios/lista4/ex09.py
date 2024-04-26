@@ -8,7 +8,7 @@ lista = [145, 542, 76, 38, 31]
 def menu():
     sy('cls')
     print("-" * 40)
-    print("|{:^38}|". format("Exercício 8"))
+    print("|{:^38}|". format("Exercício 9"))
     print("-" * 40)
     print("Escolha um valor de posição pra uma X lista")
 
