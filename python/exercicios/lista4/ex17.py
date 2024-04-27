@@ -7,17 +7,17 @@ lista = [1, 5, 4, 5, 2 , 1, 8]
 alvo = 1
 
 lista.remove(alvo)
-print(lista)
+print(f"RESUMIDO: {lista}")
 
-
+lista = [1, 5, 4, 5, 2 , 1, 8]
 
 # UTILIZANDO LÓGICA PRÓPRIA
 encontrou = False
 contadorParaAlvo = 0
+
 for i in range(len(lista)):
     if lista[i] == alvo and contadorParaAlvo == 0:
         contadorParaAlvo += 1
-        print(contadorParaAlvo)
         encontrou = True
 
     if encontrou and i < len(lista) - 1:
@@ -27,4 +27,4 @@ for i in range(len(lista)):
 
 lista.pop()
 
-print(lista)
+print(f"LÓGICA PRÓPRIA: {lista}")
