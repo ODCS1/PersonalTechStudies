@@ -3,13 +3,13 @@
 
 
 # FORMA RESUMIDA
-lista = [1, 5, 4, 5, 2 , 1, 8]
+lista = [5, 4, 1, 5, 2 , 1, 8]
 alvo = 1
 
 lista.remove(alvo)
-print(f"RESUMIDO: {lista}")
+print(f"RESUMIDO:       {lista}")
 
-lista = [1, 5, 4, 5, 2 , 1, 8]
+lista = [5, 4, 1, 5, 2 , 1, 8]
 
 # UTILIZANDO LÓGICA PRÓPRIA
 encontrou = False
