@@ -84,7 +84,15 @@ namespace apCaminhosEmMarte
 
             using (StreamWriter writer = File.AppendText(dlgAbrir.FileName))
             {
-                writer.WriteLine($"{nome}, {x}, {y}");
+                //writer.WriteLine($"{nome}, {x}, {y}");
+                int n = 16 - nome.Length;
+                String espaco = "";
+                for (int i = 1; i < n; i++)
+                {
+                    espaco += " ";
+                }
+                
+                writer.WriteLine($"{nome}{espaco}{x}{y}");
             }
 
             tabela.Inserir(novaCidade);
@@ -116,7 +124,8 @@ namespace apCaminhosEmMarte
             string nomeCidade = txtCidade.Text.Trim();
             bool encontrada = false;
 
-            var cidades = tabela.Conteudo();
+            List<Cidade> cidades = tabela.Conteudo();
+
             foreach (Cidade cidade in cidades)
             {
                 if (nomeCidade.Equals(cidade.NomeCidade, StringComparison.OrdinalIgnoreCase))

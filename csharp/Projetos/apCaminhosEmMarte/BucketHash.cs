@@ -15,7 +15,7 @@ using System.Collections.Generic;
       dados = new ArrayList[SIZE];
       for (int i = 0; i < SIZE; i++)
       {
-        // coloca em cada posição do vetor, um arrayList vazio
+        // coloca em cada posição do vetor, um arrayList vazio.
         dados[i] = new ArrayList(1);
       }
     }
