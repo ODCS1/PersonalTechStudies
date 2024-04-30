@@ -59,10 +59,9 @@ namespace apCaminhosEmMarte
             List<Tipo> aux = new List<Tipo>();
             for (int i = 0; i < dados.Length; i++)
             {
-                if (dados[i] != null)
-                {
-                    aux.Add(dados[i]);
-                }
+
+                aux.Add(dados[i]);
+
             }
             return aux;
         }
