@@ -46,7 +46,7 @@ namespace apCaminhosEmMarte
             // NESSE PONTO PARA INSERÇÃO DE UM NOVO ELEMENTO JÁ ESTÁ GARANTIDO QUE EXISTE UMA POSIÇÃO VAGA
             while ((dados[(int)posicaoAtual] != null) && ((int)posicaoAtual != primeiraPosicao || contadorColisao == 0))
             {
-                // AQUI NO CALCULO DA NOVA POSIÇÃO É BUSCADO DE FORMA QUADRÁTICA PELO NÚMERO DE COLISÕES
+                // AQUI NO CALCULO DA NOVA POSIÇÃO É BUSCADO DE FORMA DUPLA PELO NÚMERO DE COLISÕES
                 posicaoAtual = (posicaoAtual * 2) % dados.Length;
                 contadorColisao++;
             }
