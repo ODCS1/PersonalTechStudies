@@ -91,7 +91,7 @@ namespace apCaminhosEmMarte
                 {
                     espaco += " ";
                 }
-                
+
                 writer.WriteLine($"{nome}{espaco}{x}{y}");
             }
 
@@ -122,13 +122,16 @@ namespace apCaminhosEmMarte
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             string nomeCidade = txtCidade.Text.Trim();
-            bool encontrada = false;
 
             List<Cidade> cidades = tabela.Conteudo();
 
+            bool encontrada = false;
+
             foreach (Cidade cidade in cidades)
             {
-                if (nomeCidade.Equals(cidade.NomeCidade, StringComparison.OrdinalIgnoreCase))
+                string nomeCidadeFormatado = cidade.NomeCidade.Trim();
+
+                if (nomeCidade.Equals(nomeCidadeFormatado, StringComparison.OrdinalIgnoreCase))
                 {
                     encontrada = true;
                     txtCidade.Text = cidade.NomeCidade;
@@ -137,9 +140,10 @@ namespace apCaminhosEmMarte
                     break;
                 }
             }
+
             if (!encontrada)
             {
-                MessageBox.Show("Cidade não localizada");
+                MessageBox.Show("Cidade não localizada.");
             }
         }
 
@@ -147,36 +151,20 @@ namespace apCaminhosEmMarte
         {
             string nomeCidade = txtCidade.Text.Trim();
 
-            if (string.IsNullOrEmpty(nomeCidade))
+            if (tabela == null)
             {
-                MessageBox.Show("Insira uma cidade para ser removida");
+                MessageBox.Show("A tabela não foi inicializada corretamente.");
                 return;
             }
 
-            bool removida = false;
-
+            bool encontrada = false;
             foreach (Cidade cidade in tabela.Conteudo())
             {
-                if (nomeCidade.Equals(cidade.NomeCidade, StringComparison.OrdinalIgnoreCase))
+                string nomeCidadeFormatado = cidade.NomeCidade.Trim();
+                if (nomeCidade.Equals(nomeCidadeFormatado, StringComparison.OrdinalIgnoreCase))
                 {
-                    if (tabela is BucketHash<Cidade>)
-                    {
-                        removida = ((BucketHash<Cidade>)tabela).Remover(cidade);
-                    }
-                    else if (tabela is HashLinear<Cidade>)
-                    {
-                        removida = ((HashLinear<Cidade>)tabela).Remover(cidade);
-                    }
-                    else if (tabela is HashQuadratico<Cidade>)
-                    {
-                        removida = ((HashQuadratico<Cidade>)tabela).Remover(cidade);
-                    }
-                    else if (tabela is HashDuplo<Cidade>)
-                    {
-                        removida = ((HashDuplo<Cidade>)tabela).Remover(cidade);
-                    }
-
-                    if (removida)
+                    encontrada = true;
+                    if (tabela.Remover(cidade))
                     {
                         string arquivo = dlgAbrir.FileName;
                         string[] linhas = File.ReadAllLines(arquivo);
@@ -184,13 +172,12 @@ namespace apCaminhosEmMarte
                         List<String> lista = new List<String>();
                         foreach (string line in linhas)
                         {
-                            if (!line.Contains(cidade.NomeCidade))
+                            if (!line.Contains(nomeCidade))
                             {
                                 lista.Add(line);
                             }
                         }
-
-                        File.WriteAllLines(arquivo, linhas);
+                        File.WriteAllLines(arquivo, lista);
 
                         MessageBox.Show("Cidade removida com sucesso.");
                         LimparCampos();
@@ -200,12 +187,19 @@ namespace apCaminhosEmMarte
                     {
                         MessageBox.Show("Erro ao remover a cidade.");
                     }
-
-                    return;
+                    break;
                 }
             }
+            if (!encontrada)
+            {
+                MessageBox.Show("Cidade não encontrada na tabela de hash.");
+            }
+        }
 
-            MessageBox.Show("Cidade não encontrada na tabela de hash.");
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
+            AtualizarCidade();
         }
     }
 }
