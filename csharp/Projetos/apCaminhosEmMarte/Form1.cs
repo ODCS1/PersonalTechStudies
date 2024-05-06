@@ -86,7 +86,7 @@ namespace apCaminhosEmMarte
 
             if (!double.TryParse(udX.Value.ToString(), out x) || !double.TryParse(udY.Value.ToString(), out y))
             {
-                MessageBox.Show("Por favor, insira coordenadas válidas para a cidade.");
+                MessageBox.Show("Por favor, insira coordenadas válidas para a cidade.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -138,6 +138,12 @@ namespace apCaminhosEmMarte
         {
             string nomeCidade = txtCidade.Text.Trim();
 
+            if (string.IsNullOrEmpty(dlgAbrir.FileName))
+            {
+                MessageBox.Show("Por favor, abra um arquivo antes de pesquisar uma cidade.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             List<Cidade> cidades = tabela.Conteudo();
 
             bool encontrada = false;
@@ -149,6 +155,9 @@ namespace apCaminhosEmMarte
                 if (nomeCidade.Equals(nomeCidadeFormatado, StringComparison.OrdinalIgnoreCase))
                 {
                     encontrada = true;
+
+                    MessageBox.Show("Cidade localizada.", "Sucesso na busca", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     txtCidade.Text = cidade.NomeCidade;
                     udX.Value = (decimal)cidade.X;
                     udY.Value = (decimal)cidade.Y;
@@ -158,7 +167,7 @@ namespace apCaminhosEmMarte
 
             if (!encontrada)
             {
-                MessageBox.Show("Cidade não localizada.");
+                MessageBox.Show("Cidade não localizada.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -168,7 +177,7 @@ namespace apCaminhosEmMarte
 
             if (tabela == null)
             {
-                MessageBox.Show("A tabela não foi inicializada corretamente.");
+                MessageBox.Show("A tabela não foi inicializada corretamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -194,20 +203,20 @@ namespace apCaminhosEmMarte
                         }
                         File.WriteAllLines(arquivo, lista);
 
-                        MessageBox.Show("Cidade removida com sucesso.");
+                        MessageBox.Show("Cidade removida com sucesso.", "Sucesso na Remoção", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LimparCampos();
                         AtualizarCidade();
                     }
                     else
                     {
-                        MessageBox.Show("Erro ao remover a cidade.");
+                        MessageBox.Show("Erro ao remover a cidade.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     break;
                 }
             }
             if (!encontrada)
             {
-                MessageBox.Show("Cidade não encontrada na tabela de hash.");
+                MessageBox.Show("Cidade não encontrada na tabela de hash.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
