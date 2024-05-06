@@ -224,6 +224,12 @@ namespace apCaminhosEmMarte
         {
             LimparCampos();
             lsbCidades.Items.Clear();
+
+
+            if (!string.IsNullOrEmpty(dlgAbrir.FileName))
+            {
+                dlgAbrir.FileName = "";
+            }
         }
     }
 }
