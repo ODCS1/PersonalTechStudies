@@ -23,12 +23,6 @@ namespace apCaminhosEmMarte
         public int Hash(string chave)
         {
 
-            // ESSE LOOP É PARA ENCONTRAR O VALOR DE HASH PARA UMA CHAVE JÁ ARMAZENADA
-            for (int i = 0; i < dados.Length; i++)
-            {
-                if ((dados[i] != null) && (chave.Equals(dados[i].Chave))) { return i; }
-            }
-
             // PARA CHAVES AINDA NÃO ARMAZENADAS
             long tot = 0;
             for (int i = 0; i < chave.Length; i++)
@@ -68,8 +62,17 @@ namespace apCaminhosEmMarte
 
         public bool Existe(Tipo item, out int onde)
         {
-            onde = Hash(item.Chave);
-            return dados[onde].Equals(item);
+            onde = -1;
+            // ESSE LOOP É PARA ENCONTRAR O VALOR DE HASH PARA UMA CHAVE JÁ ARMAZENADA
+            for (int i = 0; i < dados.Length; i++)
+            {
+                if ((dados[i] != null) && (item.Chave.Equals(dados[i].Chave))) 
+                {
+                    onde = i;
+                    return true; 
+                }
+            }
+            return false;
         }
 
         public void Inserir(Tipo item)

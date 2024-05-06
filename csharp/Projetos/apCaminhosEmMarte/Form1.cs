@@ -97,7 +97,6 @@ namespace apCaminhosEmMarte
 
             using (StreamWriter writer = File.AppendText(dlgAbrir.FileName))
             {
-                //writer.WriteLine($"{nome}, {x}, {y}");
                 int n = 16 - nome.Length;
                 String espaco = "";
                 for (int i = 1; i < n; i++)
