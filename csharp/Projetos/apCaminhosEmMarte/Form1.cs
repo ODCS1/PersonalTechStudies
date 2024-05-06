@@ -71,6 +71,19 @@ namespace apCaminhosEmMarte
             string nome = txtCidade.Text.Trim();
             double x, y;
 
+            if (string.IsNullOrEmpty(dlgAbrir.FileName))
+            {
+                MessageBox.Show("Por favor, abra um arquivo antes de inserir uma cidade.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(nome))
+            {
+                MessageBox.Show("Por favor, insira um nome válido para a cidade.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
             if (!double.TryParse(udX.Value.ToString(), out x) || !double.TryParse(udY.Value.ToString(), out y))
             {
                 MessageBox.Show("Por favor, insira coordenadas válidas para a cidade.");
@@ -92,6 +105,8 @@ namespace apCaminhosEmMarte
                     espaco += " ";
                 }
 
+                // A CIDADE JÁ É COLOCADA AQUI NO ARQUIVO, PARA CASO O USUÁRIO QUEIRA ABRIR O MESMO ARQUIVO EM OUTRA TÉCNICA DE HASH
+                // APARECENDO A CIDADE INSERIDA NA TÉCNICA ANTERIOR DE HASH
                 writer.WriteLine($"{nome}{espaco}{x}{y}");
             }
 
