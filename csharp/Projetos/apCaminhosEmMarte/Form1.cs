@@ -199,7 +199,7 @@ namespace apCaminhosEmMarte
         private void btnListar_Click(object sender, EventArgs e)
         {
             LimparCampos();
-            AtualizarCidade();
+            lsbCidades.Items.Clear();
         }
     }
 }
