@@ -175,6 +175,13 @@ namespace apCaminhosEmMarte
         {
             string nomeCidade = txtCidade.Text.Trim();
 
+
+            if (string.IsNullOrEmpty(dlgAbrir.FileName))
+            {
+                MessageBox.Show("[ERRO] Abra um arquivo antes de tentar remover uma cidade.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (tabela == null)
             {
                 MessageBox.Show("A tabela não foi inicializada corretamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
