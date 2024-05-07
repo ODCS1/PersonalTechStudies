@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace apCaminhosEmMarte
 {
@@ -22,13 +23,6 @@ namespace apCaminhosEmMarte
 
         public int Hash(string chave)
         {
-
-            // ESSE LOOP É PARA ENCONTRAR O VALOR DE HASH PARA UMA CHAVE JÁ ARMAZENADA
-            for (int i = 0; i < dados.Length; i++)
-            {
-                if ((dados[i] != null) && (chave.Equals(dados[i].Chave))) { return i; }
-            }
-
             // PARA CHAVES AINDA NÃO ARMAZENADAS
             long tot = 0;
             for (int i = 0; i < chave.Length; i++)
@@ -38,20 +32,12 @@ namespace apCaminhosEmMarte
             if (tot < 0)
                 tot += dados.Length;
 
-            int primeiraPosicao = (int)tot;
-            long posicaoAtual = (long)primeiraPosicao;
-            int contadorColisao = 0;
+            return (int)tot;
+        }
 
-
-            // NESSE PONTO PARA INSERÇÃO DE UM NOVO ELEMENTO JÁ ESTÁ GARANTIDO QUE EXISTE UMA POSIÇÃO VAGA
-            while ((dados[(int)posicaoAtual] != null) && ((int)posicaoAtual != primeiraPosicao || contadorColisao == 0))
-            {
-                // AQUI NO CALCULO DA NOVA POSIÇÃO É BUSCADO DE FORMA DUPLA PELO NÚMERO DE COLISÕES
-                posicaoAtual = (posicaoAtual * 2) % dados.Length;
-                contadorColisao++;
-            }
-
-            return (int)posicaoAtual;
+        public int Hash2(int posicaoColisao)
+        {
+            return (2 * posicaoColisao) % dados.Length;
         }
 
 
@@ -70,8 +56,17 @@ namespace apCaminhosEmMarte
 
         public bool Existe(Tipo item, out int onde)
         {
-            onde = Hash(item.Chave);
-            return dados[onde].Equals(item);
+            onde = -1;
+            // ESSE LOOP É PARA ENCONTRAR O VALOR DE HASH PARA UMA CHAVE JÁ ARMAZENADA
+            for (int i = 0; i < dados.Length; i++)
+            {
+                if ((dados[i] != null) && (item.Chave.Equals(dados[i].Chave)))
+                {
+                    onde = i;
+                    return true;
+                }
+            }
+            return false;
         }
 
         public void Inserir(Tipo item)
@@ -79,7 +74,21 @@ namespace apCaminhosEmMarte
             if (!EstaCheio())
             {
                 int pos = Hash(item.Chave);
-                dados[pos] = item;
+                int posicaoAtual = pos;
+                while (true)
+                {
+                    
+                    if (dados[posicaoAtual] == null)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        posicaoAtual = Hash2(posicaoAtual);
+                    }
+                }
+
+                dados[posicaoAtual] = item;
                 qtd_elementos++;
             }
         }
