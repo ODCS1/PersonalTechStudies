@@ -11,7 +11,7 @@ class Solution:
             m = (l + r) // 2
 
             if nums[m] == target:
-                result = nums[m]
+                result = m
                 break
 
             if nums[m] < target:
@@ -24,6 +24,7 @@ class Solution:
 
 
 arr = [4,5,6,7,0,1,2]
-target = 2
+target = 4 # DÁ CERTO
+# target = 0 DÁ ERRADO
 obj = Solution()
 print(obj.search(arr, target))
