@@ -11,19 +11,30 @@ class Solution:
             m = (l + r) // 2
 
             if nums[m] == target:
-                result = nums[m]
+                result = m
                 break
 
-            if nums[m] < target:
-                l = m + 1
+            # VERIFICAR SE O LADO ESQUERDO ESTÁ ORDENADO
+            if nums[l] < nums[m]:
+                # VERIFICAR SE O TARGET ESTÁ NO LADO ESQUERDO
+                if nums[l] <= target < nums[m]:
+                    r = m - 1
+                else:
+                    l = m + 1
+
+            # VERIFICAR SE O LADO DIREITO ESTÁ ONDERNADO
             else:
-                r = m - 1
-            
+                # VERIFICAR SE O TARGET ESTÁ DO LADO DIREITO
+                if nums[m] < target <= nums[r]:
+                    l = m + 1
+                else:
+                    r = m - 1
+
         return result
 
 
 
 arr = [4,5,6,7,0,1,2]
-target = 2
+target = 1
 obj = Solution()
 print(obj.search(arr, target))
