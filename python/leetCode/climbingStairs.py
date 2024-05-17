@@ -2,8 +2,15 @@
 
 class Solution:
     def climbStairs(self, n: int) -> int:
-        pass
+        one, two = 1, 1
+
+        for i in range(n - 1):
+            aux = one
+            one = one + two
+            two = aux
+
+        return one
 
 
 obj = Solution()
-print(obj.climbStairs(10))
+print(obj.climbStairs(5))
