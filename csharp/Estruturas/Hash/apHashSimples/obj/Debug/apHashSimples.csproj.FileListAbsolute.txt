@@ -1,0 +1,7 @@
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Hash\apHashSimples\bin\Debug\apHashSimples.exe.config
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Hash\apHashSimples\bin\Debug\apHashSimples.exe
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Hash\apHashSimples\bin\Debug\apHashSimples.pdb
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Hash\apHashSimples\obj\Debug\apHashSimples.csproj.AssemblyReference.cache
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Hash\apHashSimples\obj\Debug\apHashSimples.csproj.CoreCompileInputs.cache
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Hash\apHashSimples\obj\Debug\apHashSimples.exe
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Hash\apHashSimples\obj\Debug\apHashSimples.pdb

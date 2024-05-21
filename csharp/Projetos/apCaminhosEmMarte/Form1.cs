@@ -237,5 +237,59 @@ namespace apCaminhosEmMarte
                 dlgAbrir.FileName = "";
             }
         }
+
+        Cidade[] asCidades;
+        int quantasCidades;   // tamanho lógico
+
+        private void tpCaminhos_Enter(object sender, EventArgs e)
+        {
+            asCidades = new Cidade[25];
+            quantasCidades = 0;
+            // abrir o arquivo de cidades
+            var arquivo = new StreamReader(dlgAbrir.FileName);
+
+            // enquanto o arquivo de cidades não acabar
+            while (!arquivo.EndOfStream)
+            {
+                //    instancie um objeto da classe cidade
+                Cidade cidadeAtual = new Cidade();
+
+                //    faça esse objeto ler um registro de cidade
+                cidadeAtual.LerRegistro(arquivo);
+
+                //    adicione esse registro de cidade após a última posição usada do vetor de cidades
+                asCidades[quantasCidades] = cidadeAtual;
+                    
+
+                //    incremente quantasCidades
+                quantasCidades++;
+
+            }
+
+
+
+            // fechar o arquivo de cidades
+            arquivo.Close();
+
+            // ordenar o vetor de cidades pelo atributo nome
+            for (int i = 0; i < quantasCidades - 1; i++)
+                for (int j = i + 1; j < quantasCidades; j++)
+                    if (asCidades[i].NomeCidade.Length > asCidades[j].NomeCidade.Length)
+                    {
+                        Cidade aux = asCidades[i];
+                        asCidades[i] = asCidades[j];
+                        asCidades[j] = aux;
+                    }
+                        
+
+            // copiar os nomes de cada cidades nos cbxOrigem e cbxDestino
+            for (int i = 0; i < quantasCidades; i++)
+            {
+                cbxOrigem.Items.Add(asCidades[i].NomeCidade);
+                cbxDestino.Items.Add(asCidades[i].NomeCidade);
+            }
+
+
+        }
     }
 }
