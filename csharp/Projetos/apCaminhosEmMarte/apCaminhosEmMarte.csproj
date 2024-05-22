@@ -54,6 +54,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HashDuplo.cs" />
+    <Compile Include="HashLinear.cs" />
+    <Compile Include="HashQuadratico.cs" />
     <Compile Include="IRegistro.cs" />
     <Compile Include="ITabelaDeHash.cs" />
     <Compile Include="Program.cs" />

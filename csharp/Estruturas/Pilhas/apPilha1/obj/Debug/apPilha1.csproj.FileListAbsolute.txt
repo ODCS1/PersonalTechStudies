@@ -1,0 +1,10 @@
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Estruturas\Pilhas\apPilha1\bin\Debug\apPilha1.exe.config
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Estruturas\Pilhas\apPilha1\bin\Debug\apPilha1.exe
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Estruturas\Pilhas\apPilha1\bin\Debug\apPilha1.pdb
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Estruturas\Pilhas\apPilha1\obj\Debug\apPilha1.csproj.AssemblyReference.cache
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Estruturas\Pilhas\apPilha1\obj\Debug\apPilha1.FrmPilhas.resources
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Estruturas\Pilhas\apPilha1\obj\Debug\apPilha1.Properties.Resources.resources
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Estruturas\Pilhas\apPilha1\obj\Debug\apPilha1.csproj.GenerateResource.cache
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Estruturas\Pilhas\apPilha1\obj\Debug\apPilha1.csproj.CoreCompileInputs.cache
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Estruturas\Pilhas\apPilha1\obj\Debug\apPilha1.exe
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Estruturas\Pilhas\apPilha1\obj\Debug\apPilha1.pdb

@@ -17,7 +17,7 @@
 # Example 3:
 
 # Input: nums = [5,4,-1,7,8]
-# Output: 23
+# Output: 23 
 # Explanation: The subarray [5,4,-1,7,8] has the largest sum 23.
  
 
@@ -34,12 +34,15 @@ from typing import List
 
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
-        maxSum = float("-inf")
-        sum = 0
-        for i in range(len(nums)):
-            sum += nums[i]
-            if (sum > maxSum):
-                maxSum = sum
+        maxSum = nums[0]
+        currentSum = maxSum
+
+        for i in range(1, len(nums)):
+            if currentSum < 0:
+                currentSum = 0
+
+            currentSum += nums[i]
+            maxSum = max(maxSum, currentSum)
         
         return maxSum
         
@@ -47,7 +50,7 @@ class Solution:
 
 
 
-vet = [-2,1,-3,4,-1,2,1,-5,4]
+vet = [5,4,-1,7,8]
 obj = Solution()
 
 mostrar = obj.maxSubArray(vet)

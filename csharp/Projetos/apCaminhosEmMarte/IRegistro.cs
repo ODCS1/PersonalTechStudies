@@ -5,12 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace apCaminhosEmMarte
+public interface IRegistro<Tipo>
 {
-  internal interface IRegistro<Tipo>
-  {
-    void LerRegistro(StreamReader arquivo);
-    void GravarDados(StreamWriter arquivo);
-    string Chave { get; }
-  }
+  void LerRegistro(StreamReader arquivo);
+  void GravarDados(StreamWriter arquivo);
+  string Chave { get; }
 }
+

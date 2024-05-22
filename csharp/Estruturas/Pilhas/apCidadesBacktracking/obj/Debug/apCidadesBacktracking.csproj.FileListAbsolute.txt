@@ -1,0 +1,10 @@
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Estruturas\Pilhas\apCidadesBacktracking\bin\Debug\apCidadesBacktracking.exe.config
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Estruturas\Pilhas\apCidadesBacktracking\bin\Debug\apCidadesBacktracking.exe
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Estruturas\Pilhas\apCidadesBacktracking\bin\Debug\apCidadesBacktracking.pdb
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Estruturas\Pilhas\apCidadesBacktracking\obj\Debug\apCidadesBacktracking.csproj.AssemblyReference.cache
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Estruturas\Pilhas\apCidadesBacktracking\obj\Debug\apCidadesBacktracking.FrmCaminhos.resources
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Estruturas\Pilhas\apCidadesBacktracking\obj\Debug\apCidadesBacktracking.Properties.Resources.resources
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Estruturas\Pilhas\apCidadesBacktracking\obj\Debug\apCidadesBacktracking.csproj.GenerateResource.cache
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Estruturas\Pilhas\apCidadesBacktracking\obj\Debug\apCidadesBacktracking.csproj.CoreCompileInputs.cache
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Estruturas\Pilhas\apCidadesBacktracking\obj\Debug\apCidadesBacktracking.exe
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Estruturas\Pilhas\apCidadesBacktracking\obj\Debug\apCidadesBacktracking.pdb

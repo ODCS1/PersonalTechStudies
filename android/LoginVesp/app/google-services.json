@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "857803869055",
+    "firebase_url": "https://atividade-mobile-79183-default-rtdb.firebaseio.com",
+    "project_id": "atividade-mobile-79183",
+    "storage_bucket": "atividade-mobile-79183.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:857803869055:android:79dfa0aab891b90617284a",
+        "android_client_info": {
+          "package_name": "br.slmm.com.loginvesp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5U4aXK8FpVKj-_9DU3lDL6W28cK5HAIM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -15,7 +15,7 @@ using System.Collections.Generic;
       dados = new ArrayList[SIZE];
       for (int i = 0; i < SIZE; i++)
       {
-        // coloca em cada posição do vetor, um arrayList vazio
+        // coloca em cada posição do vetor, um arrayList vazio.
         dados[i] = new ArrayList(1);
       }
     }
@@ -61,7 +61,6 @@ using System.Collections.Generic;
       for (int i = 0; i < dados.Length; i++)
         if (dados[i].Count > 0)
         {
-          string linha = $"{i,5} : ";
           foreach (Tipo item in dados[i])
             saida.Add(item);
         }

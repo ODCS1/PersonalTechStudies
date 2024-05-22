@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "apPilha1", "apPilha1.csproj", "{F683CE05-9700-4FE5-965E-C2EB4E1545D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F683CE05-9700-4FE5-965E-C2EB4E1545D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F683CE05-9700-4FE5-965E-C2EB4E1545D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F683CE05-9700-4FE5-965E-C2EB4E1545D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F683CE05-9700-4FE5-965E-C2EB4E1545D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46EC4923-D103-471B-9BE3-B9E9B8A08CA9}
+	EndGlobalSection
+EndGlobal

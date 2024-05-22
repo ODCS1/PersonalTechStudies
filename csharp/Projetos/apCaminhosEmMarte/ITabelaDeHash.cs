@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace apCaminhosEmMarte
 {
-  internal interface ITabelaDeHash<Tipo>
+  public interface ITabelaDeHash<Tipo>
       where Tipo : IRegistro<Tipo>
   {
     void Inserir(Tipo item);
