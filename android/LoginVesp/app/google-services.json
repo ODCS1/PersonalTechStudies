@@ -1,13 +1,14 @@
 {
   "project_info": {
-    "project_number": "693145862498",
-    "project_id": "loginfrag",
-    "storage_bucket": "loginfrag.appspot.com"
+    "project_number": "857803869055",
+    "firebase_url": "https://atividade-mobile-79183-default-rtdb.firebaseio.com",
+    "project_id": "atividade-mobile-79183",
+    "storage_bucket": "atividade-mobile-79183.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:693145862498:android:c72f586f7bf6e25a01ec3b",
+        "mobilesdk_app_id": "1:857803869055:android:79dfa0aab891b90617284a",
         "android_client_info": {
           "package_name": "br.slmm.com.loginvesp"
         }
@@ -15,26 +16,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBNMK1Ae6EZP2wyPzrmjGqX_9vw9EE5xNg"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:693145862498:android:cf133a38524adbaf01ec3b",
-        "android_client_info": {
-          "package_name": "com.example.loginfrag"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBNMK1Ae6EZP2wyPzrmjGqX_9vw9EE5xNg"
+          "current_key": "AIzaSyA5U4aXK8FpVKj-_9DU3lDL6W28cK5HAIM"
         }
       ],
       "services": {
