@@ -245,55 +245,61 @@ namespace apCaminhosEmMarte
         {
             asCidades = new Cidade[25];
             quantasCidades = 0;
-            // abrir o arquivo de cidades
-            var arquivo = new StreamReader(dlgAbrir.FileName);
-
-            // enquanto o arquivo de cidades não acabar
-            while (!arquivo.EndOfStream)
+            try
             {
-                //    instancie um objeto da classe cidade
-                Cidade cidadeAtual = new Cidade();
+                // abrir o arquivo de cidades
+                var arquivo = new StreamReader(dlgAbrir.FileName);
 
-                //    faça esse objeto ler um registro de cidade
-                cidadeAtual.LerRegistro(arquivo);
-
-                //    adicione esse registro de cidade após a última posição usada do vetor de cidades
-                asCidades[quantasCidades] = cidadeAtual;
-                    
-
-                //    incremente quantasCidades
-                quantasCidades++;
-
-            }
-
-
-
-            // fechar o arquivo de cidades
-            arquivo.Close();
-
-            // ordenar o vetor de cidades pelo atributo nome
-            for (int i = 0; i < quantasCidades; i++)
-            {
-                for (int j = 0; j < quantasCidades - i - 1; j++)
+                // enquanto o arquivo de cidades não acabar
+                while (!arquivo.EndOfStream)
                 {
-                    if (string.Compare(asCidades[j].NomeCidade, asCidades[j + 1].NomeCidade) > 0)
+                    //    instancie um objeto da classe cidade
+                    Cidade cidadeAtual = new Cidade();
+
+                    //    faça esse objeto ler um registro de cidade
+                    cidadeAtual.LerRegistro(arquivo);
+
+                    //    adicione esse registro de cidade após a última posição usada do vetor de cidades
+                    asCidades[quantasCidades] = cidadeAtual;
+
+
+                    //    incremente quantasCidades
+                    quantasCidades++;
+
+                }
+
+
+
+                // fechar o arquivo de cidades
+                arquivo.Close();
+
+                // ordenar o vetor de cidades pelo atributo nome
+                for (int i = 0; i < quantasCidades; i++)
+                {
+                    for (int j = 0; j < quantasCidades - i - 1; j++)
                     {
-                        Cidade aux = asCidades[j];
-                        asCidades[j] = asCidades[j + 1];
-                        asCidades[j + 1] = aux;
+                        if (string.Compare(asCidades[j].NomeCidade, asCidades[j + 1].NomeCidade) > 0)
+                        {
+                            Cidade aux = asCidades[j];
+                            asCidades[j] = asCidades[j + 1];
+                            asCidades[j + 1] = aux;
+                        }
                     }
                 }
+
+
+                // copiar os nomes de cada cidades nos cbxOrigem e cbxDestino
+                for (int i = 0; i < quantasCidades; i++)
+                {
+                    cbxOrigem.Items.Add(asCidades[i].NomeCidade);
+                    cbxDestino.Items.Add(asCidades[i].NomeCidade);
+                }
             }
-
-
-            // copiar os nomes de cada cidades nos cbxOrigem e cbxDestino
-            for (int i = 0; i < quantasCidades; i++)
+            catch
             {
-                cbxOrigem.Items.Add(asCidades[i].NomeCidade);
-                cbxDestino.Items.Add(asCidades[i].NomeCidade);
+                MessageBox.Show("Abra um arquivo antes!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tabControl1.SelectedTab = tpCidades;
             }
-
-
         }
     }
 }
