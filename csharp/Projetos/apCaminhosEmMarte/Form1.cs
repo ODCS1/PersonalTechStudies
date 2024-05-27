@@ -272,15 +272,19 @@ namespace apCaminhosEmMarte
             arquivo.Close();
 
             // ordenar o vetor de cidades pelo atributo nome
-            for (int i = 0; i < quantasCidades - 1; i++)
-                for (int j = i + 1; j < quantasCidades; j++)
-                    if (asCidades[i].NomeCidade.Length > asCidades[j].NomeCidade.Length)
+            for (int i = 0; i < quantasCidades; i++)
+            {
+                for (int j = 0; j < quantasCidades - i - 1; j++)
+                {
+                    if (string.Compare(asCidades[j].NomeCidade, asCidades[j + 1].NomeCidade) > 0)
                     {
-                        Cidade aux = asCidades[i];
-                        asCidades[i] = asCidades[j];
-                        asCidades[j] = aux;
+                        Cidade aux = asCidades[j];
+                        asCidades[j] = asCidades[j + 1];
+                        asCidades[j + 1] = aux;
                     }
-                        
+                }
+            }
+
 
             // copiar os nomes de cada cidades nos cbxOrigem e cbxDestino
             for (int i = 0; i < quantasCidades; i++)
