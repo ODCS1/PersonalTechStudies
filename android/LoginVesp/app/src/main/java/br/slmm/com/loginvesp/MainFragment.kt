@@ -1,5 +1,6 @@
 package br.slmm.com.loginvesp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -37,6 +38,10 @@ class MainFragment : Fragment() {
         binding.btnSignOut.setOnClickListener {
             auth.signOut()
             findNavController().navigate(R.id.action_mainFragment_to_loginFragment)
+        }
+
+        binding.btnIrTelaMapa.setOnClickListener{
+            findNavController().navigate(R.id.action_mainFragment_to_mapsActivity)
         }
     }
 }
