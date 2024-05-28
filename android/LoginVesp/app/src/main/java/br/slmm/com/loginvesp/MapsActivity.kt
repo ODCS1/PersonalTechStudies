@@ -39,7 +39,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
 
-        // Check for location permissions
         if (ActivityCompat.checkSelfPermission(
                 this,
                 Manifest.permission.ACCESS_FINE_LOCATION
@@ -57,7 +56,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
         mMap.isMyLocationEnabled = true
 
-        // Get the current location
+        // AQUI É ONDE PEGA A LOCALIZAÇÃO ATUAL
         fusedLocationClient.lastLocation.addOnSuccessListener { location: Location? ->
             if (location != null) {
                 val currentLocation = LatLng(location.latitude, location.longitude)
@@ -78,7 +77,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
                 onMapReady(mMap)
             } else {
-                // Permission denied
+                // A PERMISSÃO FOI NEGADA PELO O USUÁRIO
             }
         }
     }
