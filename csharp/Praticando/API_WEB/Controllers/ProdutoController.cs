@@ -3,82 +3,84 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API_WEB.Controllers
 {
-    public class ProdutoController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class ProdutosController : ControllerBase
     {
-        // GET: ProdutoController
-        public ActionResult Index()
+        // GET: api/<ValuesController>
+        [HttpGet]
+        public IEnumerable<Produto>? Get()
         {
-            return View();
+
+            if ((RepositorioDeProduto.Produtos == null) &&
+                    (RepositorioDeProduto.Produtos.Count == 0))
+
+                Response.StatusCode = StatusCodes.Status404NotFound;
+            else
+                Response.StatusCode = StatusCodes.Status200OK;
+
+            return RepositorioDeProduto.PegarTodos();
         }
 
-        // GET: ProdutoController/Details/5
-        public ActionResult Details(int id)
+        // GET api/<ValuesController>/5
+        [HttpGet("{codigo}")]
+        public Produto? Get(int codigo)
         {
-            return View();
+            Produto prod = RepositorioDeProduto.PegarPorCodigo(codigo.ToString());
+            /* if (prod == null) {
+                 Response.StatusCode = StatusCodes.Status404NotFound;
+             }
+             else
+             {
+                 Response.StatusCode = StatusCodes.Status200OK;
+             }
+            */
+
+            Response.StatusCode = (prod == null) ? StatusCodes.Status404NotFound : StatusCodes.Status200OK;
+
+            return prod;
+
         }
 
-        // GET: ProdutoController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: ProdutoController/Create
+        // POST api/<ValuesController>
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public void Post([FromBody] Produto prod)
         {
-            try
+            if ((prod == null) || (prod.Codigo == String.Empty))
             {
-                return RedirectToAction(nameof(Index));
+
+                Response.StatusCode = StatusCodes.Status400BadRequest;
             }
-            catch
+            else
             {
-                return View();
+                RepositorioDeProduto.Adicionar(prod);
+                Response.StatusCode = StatusCodes.Status201Created;
+            }
+
+        }
+
+        // PUT api/<ValuesController>/5
+        [HttpPut("{p}")]
+        public void Put([FromBody] Produto p)
+        {
+            Produto prod = RepositorioDeProduto.PegarPorCodigo(p.Codigo);
+            Response.StatusCode = (prod == null) ? StatusCodes.Status404NotFound : StatusCodes.Status202Accepted;
+            if (prod != null)
+            {
+                prod.Nome = p.Nome;
             }
         }
 
-        // GET: ProdutoController/Edit/5
-        public ActionResult Edit(int id)
+        // DELETE api/<ValuesController>/5
+        [HttpDelete("{codgo}")]
+        public void Delete(int codigo)
         {
-            return View();
-        }
-
-        // POST: ProdutoController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
+            Produto prod = RepositorioDeProduto.PegarPorCodigo(codigo.ToString());
+            Response.StatusCode = (prod == null) ? StatusCodes.Status404NotFound : StatusCodes.Status200OK;
+            if (prod != null)
             {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
+                RepositorioDeProduto.Remover(prod);
             }
         }
-
-        // GET: ProdutoController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: ProdutoController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
     }
 }

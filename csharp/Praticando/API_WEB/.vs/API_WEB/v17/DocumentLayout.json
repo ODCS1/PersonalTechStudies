@@ -1,0 +1,168 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\Controllers\\ProdutoController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\ProdutoController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\Controllers\\WeatherForecastController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\WeatherForecastController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\API_WEB.csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:API_WEB.csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\API_WEB.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:API_WEB.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\RepositorioDeProduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RepositorioDeProduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\Produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\WeatherForecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WeatherForecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\Properties\\launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Properties\\launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "API_WEB.csproj.user",
+              "DocumentMoniker": "C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\API_WEB.csproj.user",
+              "RelativeDocumentMoniker": "API_WEB.csproj.user",
+              "ToolTip": "C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\API_WEB.csproj.user",
+              "RelativeToolTip": "API_WEB.csproj.user",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003464|",
+              "WhenOpened": "2024-06-05T18:21:49.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "API_WEB.csproj",
+              "DocumentMoniker": "C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\API_WEB.csproj",
+              "RelativeDocumentMoniker": "API_WEB.csproj",
+              "ToolTip": "C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\API_WEB.csproj",
+              "RelativeToolTip": "API_WEB.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-06-05T18:21:47.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProdutoController.cs",
+              "DocumentMoniker": "C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\Controllers\\ProdutoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProdutoController.cs",
+              "ToolTip": "C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\Controllers\\ProdutoController.cs",
+              "RelativeToolTip": "Controllers\\ProdutoController.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAD4AAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T18:21:21.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Produto.cs",
+              "DocumentMoniker": "C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\Produto.cs",
+              "RelativeDocumentMoniker": "Produto.cs",
+              "ToolTip": "C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\Produto.cs",
+              "RelativeToolTip": "Produto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T18:21:21.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T18:21:21.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\WeatherForecast.cs",
+              "RelativeToolTip": "WeatherForecast.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T18:21:21.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T18:21:21.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RepositorioDeProduto.cs",
+              "DocumentMoniker": "C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\RepositorioDeProduto.cs",
+              "RelativeDocumentMoniker": "RepositorioDeProduto.cs",
+              "ToolTip": "C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\RepositorioDeProduto.cs",
+              "RelativeToolTip": "RepositorioDeProduto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAABeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T18:21:21.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\NB\\OneDrive\\Documentos\\estudos\\MeusEstudos\\csharp\\Praticando\\API_WEB\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-05T18:21:21.956Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
