@@ -1,23 +1,22 @@
 package com.daroca.ecommerce.controller;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.daroca.ecommerce.model.Product;
+import com.daroca.ecommerce.repositories.ProductRepository;
+
 @RestController
-@RequestMapping("/Product")
+@RequestMapping("/product")
 public class ProductController {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int productId;
+    @Autowired
+    private ProductRepository productRepository;
 
-    @Column(length = 50)
-    private String name;
-
-    @Column
-    private Double unitPrice;
+    @GetMapping("/product/{codigo}")
+    public Product one(){
+        return Product
+    }
 }
