@@ -309,7 +309,7 @@ namespace apCaminhosEmMarte
             }
         }
 
-        private void cbxOrigem_SelectedIndexChanged(object sender, EventArgs e)
+        /*private void cbxOrigem_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxDestino.SelectedItem != null)
             {
@@ -332,6 +332,42 @@ namespace apCaminhosEmMarte
                 MessageBox.Show("Você selecionou: " + selectedItem);
                 MessageBox.Show("Você selecionou(2): " + selectedItem2);
             }
+        }*/
+
+        private void btnAbrirArquivoCaminhos_Click(object sender, EventArgs e)
+        {
+            if (dlgAbrirCaminhos.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+        }
+
+        private void btnMostrarCaminhos_Click(object sender, EventArgs e)
+        {
+            if (dlgAbrirCaminhos != null)
+            {
+                if ((cbxOrigem.SelectedItem != null) && (cbxDestino.SelectedItem != null))
+                {
+                    string selectedItem = cbxOrigem.SelectedItem.ToString();
+                    string selectedItem2 = cbxDestino.SelectedItem.ToString();
+
+                    MessageBox.Show("Você selecionou: " + selectedItem);
+                    MessageBox.Show("Você selecionou(2): " + selectedItem2);
+                }
+                else
+                {
+                    MessageBox.Show("Selecione as duas cidades! Para coseguir ver os caminhos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Abra um arquivo de distâncias antes!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void openFileDialogCaminhos_FileOk(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }
