@@ -396,6 +396,7 @@
             this.cbxDestino.Name = "cbxDestino";
             this.cbxDestino.Size = new System.Drawing.Size(121, 26);
             this.cbxDestino.TabIndex = 4;
+            this.cbxDestino.SelectedIndexChanged += new System.EventHandler(this.cbxDestino_SelectedIndexChanged);
             // 
             // cbxOrigem
             // 
@@ -404,6 +405,7 @@
             this.cbxOrigem.Name = "cbxOrigem";
             this.cbxOrigem.Size = new System.Drawing.Size(121, 26);
             this.cbxOrigem.TabIndex = 3;
+            this.cbxOrigem.SelectedIndexChanged += new System.EventHandler(this.cbxOrigem_SelectedIndexChanged);
             // 
             // label6
             // 
