@@ -51,6 +51,8 @@
             this.rbBucketHash = new System.Windows.Forms.RadioButton();
             this.tpCaminhos = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnAbrirCaminhos = new System.Windows.Forms.Button();
+            this.btnBuscarCaminhos = new System.Windows.Forms.Button();
             this.dgvCaminhos = new System.Windows.Forms.DataGridView();
             this.btnAlterarCaminho = new System.Windows.Forms.Button();
             this.btnExcluirCaminho = new System.Windows.Forms.Button();
@@ -319,6 +321,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnAbrirCaminhos);
+            this.groupBox2.Controls.Add(this.btnBuscarCaminhos);
             this.groupBox2.Controls.Add(this.dgvCaminhos);
             this.groupBox2.Controls.Add(this.btnAlterarCaminho);
             this.groupBox2.Controls.Add(this.btnExcluirCaminho);
@@ -337,6 +341,26 @@
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Caminhos";
+            // 
+            // btnAbrirCaminhos
+            // 
+            this.btnAbrirCaminhos.Location = new System.Drawing.Point(181, 15);
+            this.btnAbrirCaminhos.Name = "btnAbrirCaminhos";
+            this.btnAbrirCaminhos.Size = new System.Drawing.Size(75, 23);
+            this.btnAbrirCaminhos.TabIndex = 12;
+            this.btnAbrirCaminhos.Text = "Abrir";
+            this.btnAbrirCaminhos.UseVisualStyleBackColor = true;
+            this.btnAbrirCaminhos.Click += new System.EventHandler(this.btnAbrirCaminhos_Click);
+            // 
+            // btnBuscarCaminhos
+            // 
+            this.btnBuscarCaminhos.Location = new System.Drawing.Point(101, 15);
+            this.btnBuscarCaminhos.Name = "btnBuscarCaminhos";
+            this.btnBuscarCaminhos.Size = new System.Drawing.Size(74, 23);
+            this.btnBuscarCaminhos.TabIndex = 11;
+            this.btnBuscarCaminhos.Text = "Buscar";
+            this.btnBuscarCaminhos.UseVisualStyleBackColor = true;
+            this.btnBuscarCaminhos.Click += new System.EventHandler(this.btnBuscarCaminhos_Click);
             // 
             // dgvCaminhos
             // 
@@ -528,6 +552,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgvMelhorCaminho;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnAbrirCaminhos;
+        private System.Windows.Forms.Button btnBuscarCaminhos;
     }
 }
 

@@ -333,5 +333,26 @@ namespace apCaminhosEmMarte
                 MessageBox.Show("Você selecionou(2): " + selectedItem2);
             }
         }
+
+        private void btnAbrirCaminhos_Click(object sender, EventArgs e)
+        {
+            if (dlgAbrir.ShowDialog() == DialogResult.OK)
+            {
+                var arquivo = dlgAbrir.FileName;
+            }
+        }
+
+        private void btnBuscarCaminhos_Click(object sender, EventArgs e)
+        {
+            if ((cbxOrigem.SelectedItem != null) && (cbxDestino.SelectedItem != null))
+            {
+                string cidadeOrigem = cbxOrigem.SelectedItem.ToString();
+                string cidadeDestino = cbxDestino.SelectedItem.ToString();
+
+
+                /*GrafoBacktracking grafo = new GrafoBacktracking(dlgAbrir.FileName);
+                grafo.Exibir(dgvCaminhos);*/
+            }
+        }
     }
 }
