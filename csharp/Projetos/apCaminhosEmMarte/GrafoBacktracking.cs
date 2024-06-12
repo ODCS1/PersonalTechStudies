@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace apCidadesBacktracking
 {
-  class GrafoBacktracking
+  public class GrafoBacktracking
   {
     const int tamanhoDistancia = 4;
     char tipoGrafo;
