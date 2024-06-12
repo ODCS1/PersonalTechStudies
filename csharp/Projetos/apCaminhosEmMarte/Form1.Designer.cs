@@ -51,8 +51,6 @@
             this.rbBucketHash = new System.Windows.Forms.RadioButton();
             this.tpCaminhos = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnMostrarCaminhos = new System.Windows.Forms.Button();
-            this.btnAbrirArquivoCaminhos = new System.Windows.Forms.Button();
             this.dgvCaminhos = new System.Windows.Forms.DataGridView();
             this.btnAlterarCaminho = new System.Windows.Forms.Button();
             this.btnExcluirCaminho = new System.Windows.Forms.Button();
@@ -67,7 +65,6 @@
             this.dgvMelhorCaminho = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dlgAbrir = new System.Windows.Forms.OpenFileDialog();
-            this.dlgAbrirCaminhos = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1.SuspendLayout();
             this.tpCidades.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMapa)).BeginInit();
@@ -322,8 +319,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnMostrarCaminhos);
-            this.groupBox2.Controls.Add(this.btnAbrirArquivoCaminhos);
             this.groupBox2.Controls.Add(this.dgvCaminhos);
             this.groupBox2.Controls.Add(this.btnAlterarCaminho);
             this.groupBox2.Controls.Add(this.btnExcluirCaminho);
@@ -342,26 +337,6 @@
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Caminhos";
-            // 
-            // btnMostrarCaminhos
-            // 
-            this.btnMostrarCaminhos.Location = new System.Drawing.Point(181, 18);
-            this.btnMostrarCaminhos.Name = "btnMostrarCaminhos";
-            this.btnMostrarCaminhos.Size = new System.Drawing.Size(75, 23);
-            this.btnMostrarCaminhos.TabIndex = 12;
-            this.btnMostrarCaminhos.Text = "Mostrar";
-            this.btnMostrarCaminhos.UseVisualStyleBackColor = true;
-            this.btnMostrarCaminhos.Click += new System.EventHandler(this.btnMostrarCaminhos_Click);
-            // 
-            // btnAbrirArquivoCaminhos
-            // 
-            this.btnAbrirArquivoCaminhos.Location = new System.Drawing.Point(100, 18);
-            this.btnAbrirArquivoCaminhos.Name = "btnAbrirArquivoCaminhos";
-            this.btnAbrirArquivoCaminhos.Size = new System.Drawing.Size(75, 23);
-            this.btnAbrirArquivoCaminhos.TabIndex = 11;
-            this.btnAbrirArquivoCaminhos.Text = "Abrir";
-            this.btnAbrirArquivoCaminhos.UseVisualStyleBackColor = true;
-            this.btnAbrirArquivoCaminhos.Click += new System.EventHandler(this.btnAbrirArquivoCaminhos_Click);
             // 
             // dgvCaminhos
             // 
@@ -487,11 +462,6 @@
             this.dlgAbrir.DefaultExt = "*.txt";
             this.dlgAbrir.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
-            // dlgAbrirCaminhos
-            // 
-            this.dlgAbrirCaminhos.DefaultExt = "*.txt";
-            this.dlgAbrirCaminhos.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialogCaminhos_FileOk);
-            // 
             // FrmCaminhos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -558,9 +528,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgvMelhorCaminho;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnMostrarCaminhos;
-        private System.Windows.Forms.Button btnAbrirArquivoCaminhos;
-        private System.Windows.Forms.OpenFileDialog dlgAbrirCaminhos;
     }
 }
 
