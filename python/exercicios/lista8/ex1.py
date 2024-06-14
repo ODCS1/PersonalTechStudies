@@ -2,9 +2,6 @@
 # dado. Faça um programa para testar sua função. - TUPLA
 
 
-
-
-
 def resultado(t: tuple[int]):
         
     if not(isinstance(t, tuple)):
@@ -20,8 +17,6 @@ def resultado(t: tuple[int]):
         
 
 
-
-
 def main():
     try:
         t = (1, 7, 11, 45, 8)
@@ -29,6 +24,5 @@ def main():
         print(resultado(t))
     except:
         print("[Erro] Passe uma tupla")
-    pass
 
 main()
