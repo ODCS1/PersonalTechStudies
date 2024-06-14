@@ -34,5 +34,5 @@ def main():
     except:
         print("[ERRO] O ARGUMENTO DO PARÂMETRO ERA ESPERADO UMA TUPLA!")
 
-
-main()
+if __name__ == "__main__":
+    main()
