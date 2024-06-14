@@ -1,12 +1,6 @@
 # 4. Escreva uma função em Python que resulte o menor elemento de um vetor de números 
 # dado. Faça um programa para testar sua função.
 
-
-
-# 3. Escreva uma função em Python que resulte o maior elemento de um vetor de números 
-# dado. Faça um programa para testar sua função
-
-
 def menor_for(t: tuple[int]) -> int:
     if not(isinstance(t, tuple)):
         raise ValueError
