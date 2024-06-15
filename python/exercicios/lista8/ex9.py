@@ -4,7 +4,7 @@
 
 def posicao_direita_for(numero: int, vetor: tuple[int]) -> int:
     if not isinstance(vetor, tuple):
-        raise ValueError("O segundo argumento deve ser uma tupla de números.")
+        raise ValueError
     
     posicao = -1
     for i in range(len(vetor)):
@@ -14,7 +14,7 @@ def posicao_direita_for(numero: int, vetor: tuple[int]) -> int:
 
 def posicao_direita_while(numero: int, vetor: tuple[int]) -> int:
     if not isinstance(vetor, tuple):
-        raise ValueError("O segundo argumento deve ser uma tupla de números.")
+        raise ValueError
     
     posicao = -1
     i = 0

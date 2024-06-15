@@ -4,7 +4,7 @@
 
 def contar_ocorrencias_for(numero: int, vetor: tuple[int]) -> int:
     if not isinstance(vetor, tuple):
-        raise ValueError("O segundo argumento deve ser uma tupla de números.")
+        raise ValueError
     
     count = 0
     for num in vetor:
@@ -15,7 +15,7 @@ def contar_ocorrencias_for(numero: int, vetor: tuple[int]) -> int:
 
 def contar_ocorrencias_while(numero: int, vetor: tuple[int]) -> int:
     if not isinstance(vetor, tuple):
-        raise ValueError("O segundo argumento deve ser uma tupla de números.")
+        raise ValueError
     
     count = 0
     i = 0
