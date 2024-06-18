@@ -471,6 +471,7 @@
             this.dgvMelhorCaminho.Name = "dgvMelhorCaminho";
             this.dgvMelhorCaminho.Size = new System.Drawing.Size(401, 52);
             this.dgvMelhorCaminho.TabIndex = 16;
+            this.dgvMelhorCaminho.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMelhorCaminho_CellContentClick);
             // 
             // pictureBox1
             // 

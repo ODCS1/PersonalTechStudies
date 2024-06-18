@@ -490,12 +490,10 @@ namespace apCaminhosEmMarte
 
             dgvCaminhos.Rows.Add(origem, destino, distancia);
 
-            AdicionarNoArquivoDistancias(origem, destino, distancia);
-
             MessageBox.Show($"Caminho adicionado com sucesso entre {origem} e {destino} com distância {distancia}.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void AdicionarNoArquivoDistancias(string novaOrigem, string novoDestino, int novaDistancia)
+        /*private void AdicionarNoArquivoDistancias(string novaOrigem, string novoDestino, int novaDistancia)
         {
             try
             {
@@ -511,7 +509,7 @@ namespace apCaminhosEmMarte
             {
                 MessageBox.Show($"Erro ao adicionar ao arquivo de distâncias: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
+        }*/
 
         private void btnExcluirCaminho_Click(object sender, EventArgs e)
         {
@@ -524,8 +522,6 @@ namespace apCaminhosEmMarte
 
                 dgvCaminhos.Rows.Remove(selectedRow);
 
-                RemoverDoArquivoDistancias(origem, destino, distancia);
-
                 MessageBox.Show($"Caminho entre {origem} e {destino} com distância {distancia} removido com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -534,7 +530,7 @@ namespace apCaminhosEmMarte
             }
         }
 
-        private void RemoverDoArquivoDistancias(string origem, string destino, int distancia)
+        /*private void RemoverDoArquivoDistancias(string origem, string destino, int distancia)
         {
             try
             {
@@ -558,7 +554,7 @@ namespace apCaminhosEmMarte
             {
                 MessageBox.Show($"Erro ao remover do arquivo de distâncias: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
+        }*/
 
         private void btnAlterarCaminho_Click(object sender, EventArgs e)
         {
@@ -589,8 +585,6 @@ namespace apCaminhosEmMarte
                 selectedRow.Cells["CidadeDestino"].Value = novoDestino;
                 selectedRow.Cells["Distancia"].Value = novaDistancia;
 
-                AtualizarArquivoDistancias(origemAntiga, destinoAntigo, distanciaAntiga, novaOrigem, novoDestino, novaDistancia);
-
                 MessageBox.Show($"Caminho entre {origemAntiga} e {destinoAntigo} com distância {distanciaAntiga} alterado para {novaOrigem}, {novoDestino}, {novaDistancia}.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -599,7 +593,12 @@ namespace apCaminhosEmMarte
             }
         }
 
-        private void AtualizarArquivoDistancias(string origemAntiga, string destinoAntigo, int distanciaAntiga, string novaOrigem, string novoDestino, int novaDistancia)
+        private void dgvMelhorCaminho_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        /*private void AtualizarArquivoDistancias(string origemAntiga, string destinoAntigo, int distanciaAntiga, string novaOrigem, string novoDestino, int novaDistancia)
         {
             try
             {
@@ -626,6 +625,6 @@ namespace apCaminhosEmMarte
             {
                 MessageBox.Show($"Erro ao atualizar o arquivo de distâncias: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
+        }*/
     }
 }
