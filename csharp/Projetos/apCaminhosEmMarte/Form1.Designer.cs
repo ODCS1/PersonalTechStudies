@@ -92,7 +92,7 @@
             this.tabControl1.Location = new System.Drawing.Point(4, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(681, 361);
+            this.tabControl1.Size = new System.Drawing.Size(833, 520);
             this.tabControl1.TabIndex = 0;
             // 
             // tpCidades
@@ -314,7 +314,7 @@
             this.tpCaminhos.Location = new System.Drawing.Point(4, 22);
             this.tpCaminhos.Name = "tpCaminhos";
             this.tpCaminhos.Padding = new System.Windows.Forms.Padding(3);
-            this.tpCaminhos.Size = new System.Drawing.Size(673, 335);
+            this.tpCaminhos.Size = new System.Drawing.Size(825, 494);
             this.tpCaminhos.TabIndex = 1;
             this.tpCaminhos.Text = "Caminhos";
             this.tpCaminhos.UseVisualStyleBackColor = true;
@@ -366,9 +366,9 @@
             // dgvCaminhos
             // 
             this.dgvCaminhos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCaminhos.Location = new System.Drawing.Point(0, 154);
+            this.dgvCaminhos.Location = new System.Drawing.Point(1, 142);
             this.dgvCaminhos.Name = "dgvCaminhos";
-            this.dgvCaminhos.Size = new System.Drawing.Size(256, 166);
+            this.dgvCaminhos.Size = new System.Drawing.Size(257, 335);
             this.dgvCaminhos.TabIndex = 10;
             // 
             // btnAlterarCaminho
@@ -467,9 +467,9 @@
             this.dgvMelhorCaminho.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMelhorCaminho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMelhorCaminho.Location = new System.Drawing.Point(269, 275);
+            this.dgvMelhorCaminho.Location = new System.Drawing.Point(269, 335);
             this.dgvMelhorCaminho.Name = "dgvMelhorCaminho";
-            this.dgvMelhorCaminho.Size = new System.Drawing.Size(401, 52);
+            this.dgvMelhorCaminho.Size = new System.Drawing.Size(551, 151);
             this.dgvMelhorCaminho.TabIndex = 16;
             this.dgvMelhorCaminho.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMelhorCaminho_CellContentClick);
             // 
@@ -481,7 +481,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(269, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(401, 264);
+            this.pictureBox1.Size = new System.Drawing.Size(547, 323);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
@@ -500,7 +500,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 363);
+            this.ClientSize = new System.Drawing.Size(836, 522);
             this.Controls.Add(this.tabControl1);
             this.Name = "FrmCaminhos";
             this.Text = "Caminhos em Marte - 23505 - 23623";

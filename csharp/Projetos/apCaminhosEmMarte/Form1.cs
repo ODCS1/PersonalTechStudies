@@ -21,6 +21,10 @@ namespace apCaminhosEmMarte
             dgvCaminhos.Columns.Add("CidadeOrigem", "Cidade Origem");
             dgvCaminhos.Columns.Add("CidadeDestino", "Cidade Destino");
             dgvCaminhos.Columns.Add("Distancia", "Distância");
+
+            dgvMelhorCaminho.Columns.Add("CidadeOrigem", "Cidade Origem");
+            dgvMelhorCaminho.Columns.Add("CidadeDestino", "Cidade Destino");
+            dgvMelhorCaminho.Columns.Add("Distancia", "Distância");
         }
 
         ITabelaDeHash<Cidade> tabela;
@@ -440,36 +444,56 @@ namespace apCaminhosEmMarte
             }
         }
 
-
-
-        //GrafoBacktracking grafo;
         private void btnMostrarCaminhos_Click(object sender, EventArgs e)
         {
-            GrafoBacktracking grafo = new GrafoBacktracking(caminhoArquivo);
-            
-            if (dlgAbrirCaminhos != null)
+            if (dgvCaminhos.Rows.Count > 0)
             {
-                GrafoBacktracking grafo = new GrafoBacktracking(caminhoArquivo, quantasCidades);
-                
+                int menorDistancia = int.MaxValue;
+                DataGridViewRow melhorCaminho = null;
 
-                if ((cbxOrigem.SelectedItem != null) && (cbxDestino.SelectedItem != null))
+                // Encontrar o menor caminho na DataGridView dgvCaminhos
+                foreach (DataGridViewRow row in dgvCaminhos.Rows)
                 {
-                    string selectedItem = cbxOrigem.SelectedItem.ToString();
-                    string selectedItem2 = cbxDestino.SelectedItem.ToString();
+                    int distancia;
+                    if (row.Cells["Distancia"].Value != null && int.TryParse(row.Cells["Distancia"].Value.ToString(), out distancia))
+                    {
+                        if (distancia < menorDistancia)
+                        {
+                            menorDistancia = distancia;
+                            melhorCaminho = row;
+                        }
+                    }
+                }
 
-                    MessageBox.Show("Você selecionou: " + selectedItem);
-                    MessageBox.Show("Você selecionou(2): " + selectedItem2);
+                if (melhorCaminho != null)
+                {
+                    dgvMelhorCaminho.Rows.Clear();
+
+                    string cidadeOrigem = melhorCaminho.Cells["CidadeOrigem"].Value?.ToString();
+                    string cidadeDestino = melhorCaminho.Cells["CidadeDestino"].Value?.ToString();
+
+                    if (cidadeOrigem != null && cidadeDestino != null)
+                    {
+                        dgvMelhorCaminho.Rows.Add(cidadeOrigem, cidadeDestino, menorDistancia);
+
+                        MessageBox.Show($"Menor caminho adicionado com sucesso: {cidadeOrigem} - {cidadeDestino} ({menorDistancia})", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Não foi possível encontrar os nomes das cidades de origem e destino.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Selecione as duas cidades! Para coseguir ver os caminhos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Não há caminhos para exibir.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Abra um arquivo de distâncias antes!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Adicione caminhos no dgvCaminhos antes de mostrar o menor caminho.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void openFileDialogCaminhos_FileOk(object sender, CancelEventArgs e)
         {
