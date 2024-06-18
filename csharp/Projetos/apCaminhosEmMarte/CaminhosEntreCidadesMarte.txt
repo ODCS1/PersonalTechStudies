@@ -28,3 +28,4 @@ Gondor         Moria           1200
 Gondor         Lowell          2000
 Lakefront      Bakhuysen        327
 Dumont         Esperança        120
+Arena          Bradbury       12

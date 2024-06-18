@@ -17,6 +17,10 @@ namespace apCaminhosEmMarte
         public FrmCaminhos()
         {
             InitializeComponent();
+
+            dgvCaminhos.Columns.Add("CidadeOrigem", "Cidade Origem");
+            dgvCaminhos.Columns.Add("CidadeDestino", "Cidade Destino");
+            dgvCaminhos.Columns.Add("Distancia", "Distância");
         }
 
         ITabelaDeHash<Cidade> tabela;
@@ -309,7 +313,7 @@ namespace apCaminhosEmMarte
             }
         }
 
-        /*private void cbxOrigem_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbxOrigem_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxDestino.SelectedItem != null)
             {
@@ -332,15 +336,111 @@ namespace apCaminhosEmMarte
                 MessageBox.Show("Você selecionou: " + selectedItem);
                 MessageBox.Show("Você selecionou(2): " + selectedItem2);
             }
-        }*/
+        }
+
+        private int[,] matrizAdjacente;
+        private Dictionary<string, int> indiceCidades;
+        private int numeroTotalCidades;
+
+        private void CarregarArquivoDistancias(string caminhoArquivo)
+        {
+            try
+            {
+                using (StreamReader sr = new StreamReader(caminhoArquivo))
+                {
+                    indiceCidades = new Dictionary<string, int>();
+                    numeroTotalCidades = 0;
+
+                    while (!sr.EndOfStream)
+                    {
+                        string linha = sr.ReadLine();
+                        if (linha != null)
+                        {
+                            string[] partes = linha.Split(new char[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+                            if (partes.Length == 3)
+                            {
+                                string cidadeOrigem = partes[0];
+                                string cidadeDestino = partes[1];
+
+                                if (!indiceCidades.ContainsKey(cidadeOrigem))
+                                {
+                                    indiceCidades.Add(cidadeOrigem, numeroTotalCidades++);
+                                }
+                                if (!indiceCidades.ContainsKey(cidadeDestino))
+                                {
+                                    indiceCidades.Add(cidadeDestino, numeroTotalCidades++);
+                                }
+                            }
+                        }
+                    }
+
+                    matrizAdjacente = new int[numeroTotalCidades, numeroTotalCidades];
+
+                    sr.BaseStream.Seek(0, SeekOrigin.Begin);
+                    while (!sr.EndOfStream)
+                    {
+                        string linha = sr.ReadLine();
+                        if (linha != null)
+                        {
+                            string[] partes = linha.Split(new char[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+                            if (partes.Length == 3)
+                            {
+                                string cidadeOrigem = partes[0];
+                                string cidadeDestino = partes[1];
+                                int distancia = int.Parse(partes[2]);
+
+                                int indiceOrigem = indiceCidades[cidadeOrigem];
+                                int indiceDestino = indiceCidades[cidadeDestino];
+
+                                matrizAdjacente[indiceOrigem, indiceDestino] = distancia;
+                                matrizAdjacente[indiceDestino, indiceOrigem] = distancia;
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao carregar o arquivo de distâncias: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         private void btnAbrirArquivoCaminhos_Click(object sender, EventArgs e)
         {
             if (dlgAbrirCaminhos.ShowDialog() == DialogResult.OK)
             {
+                string caminhoArquivo = dlgAbrirCaminhos.FileName;
 
+                CarregarArquivoDistancias(caminhoArquivo);
+
+                dgvCaminhos.Rows.Clear();
+
+                try
+                {
+                    using (StreamReader sr = new StreamReader(caminhoArquivo))
+                    {
+                        string linha;
+                        while ((linha = sr.ReadLine()) != null)
+                        {
+                            string[] partes = linha.Split(new char[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+                            if (partes.Length == 3)
+                            {
+                                dgvCaminhos.Rows.Add(partes[0], partes[1], partes[2]);
+                            }
+                        }
+
+                        MessageBox.Show("Dados carregados com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro ao abrir o arquivo: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
+
+
+
 
         private void btnMostrarCaminhos_Click(object sender, EventArgs e)
         {
@@ -368,6 +468,164 @@ namespace apCaminhosEmMarte
         private void openFileDialogCaminhos_FileOk(object sender, CancelEventArgs e)
         {
 
+        }
+
+        private void btnIncluirCaminho_Click(object sender, EventArgs e)
+        {
+            string origem = cbxOrigem.Text.Trim();
+            string destino = cbxDestino.Text.Trim();
+            int distancia;
+
+            if (string.IsNullOrEmpty(origem) || string.IsNullOrEmpty(destino))
+            {
+                MessageBox.Show("Insira uma cidade de origem e destino válidas para adicionar um caminho.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!int.TryParse(udDistancia.Value.ToString(), out distancia) || distancia <= 0)
+            {
+                MessageBox.Show("Insira uma distância válida para o caminho.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            dgvCaminhos.Rows.Add(origem, destino, distancia);
+
+            AdicionarNoArquivoDistancias(origem, destino, distancia);
+
+            MessageBox.Show($"Caminho adicionado com sucesso entre {origem} e {destino} com distância {distancia}.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void AdicionarNoArquivoDistancias(string novaOrigem, string novoDestino, int novaDistancia)
+        {
+            try
+            {
+                string caminhoArquivo = dlgAbrirCaminhos.FileName;
+
+                using (StreamWriter writer = File.AppendText(caminhoArquivo))
+                {
+                    string linhaFormatada = $"{novaOrigem.PadRight(15)}{novoDestino.PadRight(16)}{novaDistancia}";
+                    writer.WriteLine(linhaFormatada);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao adicionar ao arquivo de distâncias: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnExcluirCaminho_Click(object sender, EventArgs e)
+        {
+            if (dgvCaminhos.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dgvCaminhos.SelectedRows[0];
+                string origem = selectedRow.Cells["CidadeOrigem"].Value.ToString();
+                string destino = selectedRow.Cells["CidadeDestino"].Value.ToString();
+                int distancia = Convert.ToInt32(selectedRow.Cells["Distancia"].Value);
+
+                dgvCaminhos.Rows.Remove(selectedRow);
+
+                RemoverDoArquivoDistancias(origem, destino, distancia);
+
+                MessageBox.Show($"Caminho entre {origem} e {destino} com distância {distancia} removido com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Selecione um caminho na lista para remoção.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void RemoverDoArquivoDistancias(string origem, string destino, int distancia)
+        {
+            try
+            {
+                string caminhoArquivo = dlgAbrirCaminhos.FileName;
+                string[] linhas = File.ReadAllLines(caminhoArquivo);
+
+                List<string> novasLinhas = new List<string>();
+                foreach (string linha in linhas)
+                {
+                    string[] partes = linha.Split(new char[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+                    if (partes.Length == 3 && partes[0] == origem && partes[1] == destino && int.Parse(partes[2]) == distancia)
+                    {
+                        continue;
+                    }
+                    novasLinhas.Add(linha);
+                }
+
+                File.WriteAllLines(caminhoArquivo, novasLinhas);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao remover do arquivo de distâncias: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnAlterarCaminho_Click(object sender, EventArgs e)
+        {
+            if (dgvCaminhos.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dgvCaminhos.SelectedRows[0];
+                string origemAntiga = selectedRow.Cells["CidadeOrigem"].Value.ToString();
+                string destinoAntigo = selectedRow.Cells["CidadeDestino"].Value.ToString();
+                int distanciaAntiga = Convert.ToInt32(selectedRow.Cells["Distancia"].Value);
+
+                string novaOrigem = cbxOrigem.Text.Trim();
+                string novoDestino = cbxDestino.Text.Trim();
+                int novaDistancia;
+
+                if (string.IsNullOrEmpty(novaOrigem) || string.IsNullOrEmpty(novoDestino))
+                {
+                    MessageBox.Show("Insira uma cidade de origem e destino válidas para alterar um caminho.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!int.TryParse(udDistancia.Value.ToString(), out novaDistancia) || novaDistancia <= 0)
+                {
+                    MessageBox.Show("Insira uma distância válida para o caminho.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                selectedRow.Cells["CidadeOrigem"].Value = novaOrigem;
+                selectedRow.Cells["CidadeDestino"].Value = novoDestino;
+                selectedRow.Cells["Distancia"].Value = novaDistancia;
+
+                AtualizarArquivoDistancias(origemAntiga, destinoAntigo, distanciaAntiga, novaOrigem, novoDestino, novaDistancia);
+
+                MessageBox.Show($"Caminho entre {origemAntiga} e {destinoAntigo} com distância {distanciaAntiga} alterado para {novaOrigem}, {novoDestino}, {novaDistancia}.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Selecione um caminho na lista para alteração.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void AtualizarArquivoDistancias(string origemAntiga, string destinoAntigo, int distanciaAntiga, string novaOrigem, string novoDestino, int novaDistancia)
+        {
+            try
+            {
+                string caminhoArquivo = dlgAbrirCaminhos.FileName;
+                string[] linhas = File.ReadAllLines(caminhoArquivo);
+
+                List<string> novasLinhas = new List<string>();
+                foreach (string linha in linhas)
+                {
+                    string[] partes = linha.Split(new char[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+                    if (partes.Length == 3 && partes[0] == origemAntiga && partes[1] == destinoAntigo && int.Parse(partes[2]) == distanciaAntiga)
+                    {
+                        novasLinhas.Add($"{novaOrigem.PadRight(15)}{novoDestino.PadRight(15)}{novaDistancia}");
+                    }
+                    else
+                    {
+                        novasLinhas.Add(linha);
+                    }
+                }
+
+                File.WriteAllLines(caminhoArquivo, novasLinhas);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao atualizar o arquivo de distâncias: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
