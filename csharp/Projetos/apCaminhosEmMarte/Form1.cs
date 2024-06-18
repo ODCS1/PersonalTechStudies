@@ -405,17 +405,18 @@ namespace apCaminhosEmMarte
             }
         }
 
+        string caminhoArquivo;
         private void btnAbrirArquivoCaminhos_Click(object sender, EventArgs e)
         {
             if (dlgAbrirCaminhos.ShowDialog() == DialogResult.OK)
             {
-                string caminhoArquivo = dlgAbrirCaminhos.FileName;
+                caminhoArquivo = dlgAbrirCaminhos.FileName;
 
-                CarregarArquivoDistancias(caminhoArquivo);
+                //CarregarArquivoDistancias(caminhoArquivo);
 
                 dgvCaminhos.Rows.Clear();
 
-                try
+                /*try
                 {
                     using (StreamReader sr = new StreamReader(caminhoArquivo))
                     {
@@ -435,17 +436,22 @@ namespace apCaminhosEmMarte
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Erro ao abrir o arquivo: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                }*/
             }
         }
 
 
 
-
+        //GrafoBacktracking grafo;
         private void btnMostrarCaminhos_Click(object sender, EventArgs e)
         {
+            GrafoBacktracking grafo = new GrafoBacktracking(caminhoArquivo);
+            
             if (dlgAbrirCaminhos != null)
             {
+                GrafoBacktracking grafo = new GrafoBacktracking(caminhoArquivo, quantasCidades);
+                
+
                 if ((cbxOrigem.SelectedItem != null) && (cbxDestino.SelectedItem != null))
                 {
                     string selectedItem = cbxOrigem.SelectedItem.ToString();

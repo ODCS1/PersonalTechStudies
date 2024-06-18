@@ -16,18 +16,19 @@ namespace apCidadesBacktracking
     int qtasCidades;
     int[,] matriz;
 
-    public GrafoBacktracking(string nomeArquivo)
+    public GrafoBacktracking(string nomeArquivo, int qtasCidades)
     {
       var arquivo = new StreamReader(nomeArquivo);
-      tipoGrafo = arquivo.ReadLine()[0]; // acessa primeiro caracter com tipo do grafo
-      qtasCidades = int.Parse(arquivo.ReadLine());
+      qtasCidades = qtasCidades;
       matriz = new int[qtasCidades, qtasCidades];
+      
 
+       // ALTERAR AQUI
       for (int linha = 0; linha < qtasCidades; linha++)
       {
         string arestas = arquivo.ReadLine();
         for (int coluna = 0; coluna < qtasCidades; coluna++)
-          matriz[linha, coluna] =
+          matriz[linha, coluna] = // TÁ ADICIONANDO ERRADO
             int.Parse(arestas.Substring(coluna * tamanhoDistancia, tamanhoDistancia));
       }
     }
