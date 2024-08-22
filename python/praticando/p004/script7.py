@@ -2,9 +2,6 @@ clientes = {}
 
 comandas_abertas = []
 
-
-# Função Principal
-
 def main():
     while True:
         print("Menu de opções:")
@@ -36,16 +33,11 @@ def main():
         else:
             print("Opção inválida.")
 
-
-# Cadastrar novo cliente
-
 def cadastrar_cliente():
     nome = input("Digite o nome do cliente: ")
     telefone = input("Digite o telefone do cliente: ")
     clientes[telefone] = nome
     print("Cliente cadastrado com sucesso!")
-
-# Abrir comanda
 
 def abrir_comanda():
     telefone = input("Digite o número do telefone do cliente: ")
@@ -59,8 +51,6 @@ def abrir_comanda():
     else:
         print("Cliente não encontrado.")
 
-
-# Fazer um pedido
 
 def fazer_pedido():
     telefone = input("Digite o número do telefone do cliente: ")
@@ -96,7 +86,6 @@ def fazer_pedido():
     comanda["valor_total"] += valor
     print("Pedido adicionado com sucesso!")
 
-# Fechar comanda
 
 def fechar_comanda():
     telefone = input("Digite o número do telefone do cliente: ")
@@ -116,8 +105,6 @@ def fechar_comanda():
     print("Comanda fechada com sucesso!")
 
 
-# Ver comandas abertas
-
 def ver_comandas_abertas():
     for c in comandas_abertas:
         print("Comanda do cliente", clientes[c["telefone"]])
@@ -126,14 +113,10 @@ def ver_comandas_abertas():
         print("Valor total: R$", c["valor_total"])
 
 
-# Ver clientes cadastrados
-
 def ver_clientes_cadastrados():
     for telefone, nome in clientes.items():
         print(nome, "-", telefone)
 
-
-# Ver valor da comanda aberta
 
 def ver_valor_comanda_aberta():
     telefone = input("Digite o número do telefone do cliente: ")
@@ -148,13 +131,9 @@ def ver_valor_comanda_aberta():
     print("Valor total da comanda:", comanda["valor_total"])
 
 
-# Sair do sistema
-
 def sair():
     print("Saindo do sistema...")
     exit()
-
-# Chamar a função main() para iniciar o sistema
 
 if __name__ == "__main__":
     main()
