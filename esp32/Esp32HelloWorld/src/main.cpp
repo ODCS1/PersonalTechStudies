@@ -19,11 +19,11 @@ void loop() {
   digitalWrite(blue, HIGH);
   digitalWrite(green, LOW);
   Serial.println("Hello World!");
-  delay(1000); 
+  delay(2000); 
   
 
   digitalWrite(ledPin, LOW);
   digitalWrite(blue, LOW);
   digitalWrite(green, HIGH);
-  delay(1000); 
+  delay(2000); 
 }
