@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"name": "Esp32HelloWorld",
+			"path": "../../Esp32HelloWorld"
+		},
+		{
+			"name": "LedRgb",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
