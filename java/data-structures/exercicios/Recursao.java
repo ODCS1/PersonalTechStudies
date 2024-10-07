@@ -77,7 +77,7 @@ public class Recursao {
         return multi(poten(a, sub(b, 1)), a);
 
     }
-    
+
     // 7
     public static int div(int a, int b) {
         if (b == 0) {
@@ -102,50 +102,70 @@ public class Recursao {
 
         return soma(1, div(sub(a, b), b));
     }
-    
+
     // 8
     public static int resto(int a, int b) {
+        if (b == 0) {
+            throw new IllegalArgumentException("O divisor não pode ser 0!!!");
+        }
 
-        return -1;
+        if (ehNegativo(sub(modulo(a), modulo(b)))) {
+            return modulo(a);
+        }
+
+        return resto(sub(modulo(a), modulo(b)), modulo(b));
     }
 
     // 9
-    public static boolean primeiroEhMaior(int a, int b) {
+    public static boolean primeiroEhMenor(int a, int b) {
+        if (a == 0) {
+            if (b == 0) { return false; }
+            
+            return true;
+        }
 
-        return false;
+        if (b == 0) { return false; }
+
+        
+        // if (ehNegativo(b)){}
+        
+        return primeiroEhMenor(sub(a, 1), sub(b, 1));
     }
+
     
     // 10
-    public static boolean primeiroEhMenor(int a, int b) {
+    public static boolean primeiroEhMenorOuIgual(int a, int b) {
 
         return false;
     }
 
     // 11
-    public static boolean teste(int a, int b) {
+    public static boolean primeiroEhMaior(int a, int b) {
 
         return false;
     }
 
     // 12
-    public static boolean teste1(int a, int b) {
+    public static boolean primeiroEhMaiorOuIgual(int a, int b) {
 
         return false;
     }
-    
+
     // 13
-    public static boolean teste2(int a, int b) {
+    public static boolean primeiroEhDiferenteDoSegundo(int a, int b) {
 
         return false;
     }
-    
+
     public static void main(String[] args) {
-        // System.out.println("Exc 1: " + ehNegativo(5));
-        // System.out.println("Exc 2: " + soma(7, 3));
-        // System.out.println("Exc 3: " + sub(-5, -3));
-        // System.out.println("Exc 4: " + modulo(5));
-        // System.out.println("Exc 5: " + multi(-2, -8));
-        // System.out.println("Exc 6: " + poten(-2, 3));
-        System.out.println("Exc 7: " + div(10, -5));
+        // System.out.println("Exercício 1: " + ehNegativo(5));
+        // System.out.println("Exercício 2: " + soma(7, 3));
+        // System.out.println("Exercício 3: " + sub(-5, -3));
+        // System.out.println("Exercício 4: " + modulo(5));
+        // System.out.println("Exercício 5: " + multi(-2, -8));
+        // System.out.println("Exercício 6: " + poten(-2, 3));
+        // System.out.println("Exercício 7: " + div(10, 5));
+        // System.out.println("Exercício 8: " + resto(17, -3));
+        System.out.println("Exercício 9: " + primeiroEhMenor(4, 4));
     }
 }
