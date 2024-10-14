@@ -1,29 +1,26 @@
 #include <Arduino.h>
 
-const int ledPin = 12;
-const int blue = 21;
-const int green = 22;
+const int ledPinGeral = 12;
+const int ledPinCampo = 21;
 
 void setup() {
 
-  pinMode(ledPin, OUTPUT);
-  pinMode(blue, OUTPUT);
-  pinMode(green, OUTPUT);
+  pinMode(ledPinGeral, OUTPUT);
+  pinMode(ledPinCampo, OUTPUT);
   Serial.begin(9600);
   Serial.println("Hello World!");
 }
 
 void loop() {
 
-  digitalWrite(ledPin, HIGH);
-  digitalWrite(blue, HIGH);
-  digitalWrite(green, LOW);
+  digitalWrite(ledPinGeral, HIGH);
+  digitalWrite(ledPinCampo, HIGH);
   Serial.println("Hello World!");
-  delay(2000); 
+  delay(4000); 
   
 
-  digitalWrite(ledPin, LOW);
-  digitalWrite(blue, LOW);
-  digitalWrite(green, HIGH);
-  delay(2000); 
+  digitalWrite(ledPinGeral, LOW);
+  digitalWrite(ledPinCampo, LOW);
+  delay(4000); 
+// }
 }
