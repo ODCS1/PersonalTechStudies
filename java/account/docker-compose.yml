@@ -1,0 +1,36 @@
+services:
+  account-database:
+    container_name: jupyter
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: account
+      MY_USER: root
+      MYSQL_ROOT_PASSWORD: abc123
+    ports:
+      - 3306:3306
+    expose:
+      - 3306
+
+  account-service:
+    build: .
+    container_name: marte
+    image: account:latest
+    environment:
+      MYSQL_HOST: jupyter
+      MYSQL_PORT: 3306
+      MYSQL_DATABASE: account
+      MYSQL_USER: root
+      MYSQL_PASSWORD: abc123
+    ports:
+      - 8080:8080
+    expose:
+      - 8080
+    networks:
+      - account-private-network
+    depends_on:
+      - account-database
+
+networks:
+  account-private-network:
+    name: account-private-network
+    driver: bridge
