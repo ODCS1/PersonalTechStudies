@@ -1,6 +1,7 @@
 // import Message  from "./Message";
 import ListGroup from "./components/ListGroup";
 import Counter from "./components/Counter";
+import Alert from "./components/Alert";
 
 function App() {
   // let cities = ["São Paulo", "Tokyo", "Paris", "Roma"];
@@ -10,6 +11,7 @@ function App() {
     console.log(item);
   }
 
+  let textValue: string = "Alert Element"
 
 
   return (
@@ -21,6 +23,12 @@ function App() {
       <div>
         <Counter />
       </div>
+
+      <>
+        <Alert>
+          <p><b>{textValue}</b></p>
+        </Alert>
+      </>
     </>
   );
 }
