@@ -1,7 +1,7 @@
-FROM openjdk
+FROM openjdk:21-slim
 
 WORKDIR /app
 
-COPY target/spring-app-1.0.0-SNAPSHOT.jar /app/spring-app.jar
+COPY target/account-1.0.0-SNAPSHOT.jar /app/account.jar
 
-ENTRYPOINT ["java", "-jar", "spring-app.jar"]
+ENTRYPOINT ["java", "-jar", "account.jar"]
