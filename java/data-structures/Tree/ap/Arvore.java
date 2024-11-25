@@ -119,10 +119,81 @@ public class Arvore <X extends Comparable<X>> implements Cloneable
 			}
 		}
 	}
-	
-    public boolean tem (X i) throws Exception
-    {
-		// procurar i na arvore; achou retorna true;
-		// nao achou, retorna false
+
+	public void emOrdem(){ emOrdem(this.raiz); }
+
+	public void emOrdem(No atual) {
+		if (atual != null) {
+			emOrdem(atual.getEsq());
+			System.out.println(atual.getInfo());
+			emOrdem(atual.getDir());
+		}
 	}
+
+	public void preOrdem(){ preOrdem(this.raiz); }
+
+	public void preOrdem(No atual) {
+		if (atual != null){
+			System.out.println(atual.getInfo());
+			preOrdem(atual.getEsq());
+			preOrdem(atual.getDir());
+		}
+	}
+
+	public void posOrdem() { preOrdem(this.raiz); }
+
+	public void posOrdem(No atual) {
+		if (atual != null) {
+			posOrdem(atual.getEsq());
+			posOrdem(atual.getEsq());
+			System.out.println(atual.getInfo());
+		}
+	}
+	
+
+
+	public boolean temSemOrdem(X i) throws Exception {
+		if (i == null) 
+			throw new Exception("Informação ausente");
+	
+		return temSemOrdem(this.raiz, i);
+	}
+	
+	private boolean temSemOrdem(No atual, X i) throws Exception {
+		if (atual == null) 
+			return false;
+	
+		// Verifica o nó atual
+		if (atual.getInfo().equals(i)) 
+			return true;
+	
+		// Continua a busca na esquerda e na direita
+		return temSemOrdem(atual.getEsq(), i) || temSemOrdem(atual.getDir(), i);
+	}
+	
+	public boolean temComOrdem(X i) throws Exception {
+		if (i == null) 
+			throw new Exception("Informação ausente");
+	
+		return temComOrdem(this.raiz, i);
+	}
+	
+	private boolean temComOrdem(No atual, X i) throws Exception {
+		if (atual == null) 
+			return false;
+	
+		int comparacao = i.compareTo(atual.getInfo());
+	
+		// Se encontrou o elemento
+		if (comparacao == 0) 
+			return true;
+	
+		// Se o valor buscado é menor, vai para a esquerda
+		if (comparacao < 0) 
+			return temComOrdem(atual.getEsq(), i);
+	
+		// Se o valor buscado é maior, vai para a direita
+		return temComOrdem(atual.getDir(), i);
+	}
+	
 }
