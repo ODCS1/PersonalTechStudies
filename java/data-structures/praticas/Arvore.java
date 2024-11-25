@@ -29,8 +29,19 @@ public class Arvore<X extends Comparable<X>> implements Cloneable {
             if (comparacao == 0) throw new Exception("INFIRMAÇÃO REPETIDA! ");
 
             if (comparacao < 0){
-                
+                if (noAtual.getEsq() == null){
+                    noAtual.setEsq(new No<X>(copia);
+                    return;
+                }
+                noAtual = noAtual.getEsq();
+            }else {
+                if (noAtual.getDir() == null){
+                    noAtual.setDir(new No<X>(copia);
+                    return;
+                }
+                noAtual = noAtual.getDir();
             }
+            
         }
     }
 
