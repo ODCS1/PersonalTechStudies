@@ -11,6 +11,7 @@ class HomePage extends StatefulWidget {
 
 class HomePageState extends State<HomePage> {
   int counter = 0;
+  bool isDarkTheme = false;
 
   @override
   Widget build (BuildContext context) {
@@ -22,19 +23,17 @@ class HomePageState extends State<HomePage> {
           ),
       ),
     
-      body: Container(
-        height: 200,
-        width: 200,
-        color: Colors.purple,
-        child: Align(
-          alignment: Alignment.center,
-          child: Container(
-            height: 100,
-            width: 100,
-            color: Colors.cyan,
-          ),
+      body: Center(
+        child: Switch(
+          value: isDarkTheme,
+          onChanged: (value) {
+            setState(() {
+              isDarkTheme = value;
+            });
+          }
         ),
       ),
+
 
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
