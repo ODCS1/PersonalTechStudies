@@ -21,6 +21,21 @@ class HomePageState extends State<HomePage> {
           style: TextStyle(fontSize: 20.0)
           ),
       ),
+    
+      body: Container(
+        height: 200,
+        width: 200,
+        color: Colors.purple,
+        child: Align(
+          alignment: Alignment.center,
+          child: Container(
+            height: 100,
+            width: 100,
+            color: Colors.cyan,
+          ),
+        ),
+      ),
+
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
         onPressed: () {
@@ -29,18 +44,7 @@ class HomePageState extends State<HomePage> {
           });
         }
       ),
-      body: Center(
-        child: GestureDetector(
-          child: Text(
-            'CLIQUES: $counter'
-          ),
-          onTap: () {
-            setState(() {
-              counter++;
-            });
-          },
-        ),
-      ),
+
     );
   }
 }

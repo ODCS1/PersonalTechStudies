@@ -9,6 +9,7 @@ class AppWidget extends StatelessWidget {
     return  MaterialApp(
       theme: ThemeData(
         primarySwatch: Colors.red,
+        brightness: Brightness.dark,
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.red,
           titleTextStyle: TextStyle(
