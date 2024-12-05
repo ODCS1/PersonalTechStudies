@@ -21,17 +21,70 @@ class HomePageState extends State<HomePage> {
           "Home Page",
           style: TextStyle(fontSize: 20.0)
           ),
+        actions:  [
+          AnimatedBuilder(
+          animation: AppController.instance,
+          builder:(context, child) {
+            return Switch(
+              value: AppController.instance.isDarkTheme,
+              onChanged: (value) {
+                AppController.instance.changeTheme();
+              }
+            );
+          }),
+        ],
       ),
     
-      body: Center(
-        child: Switch(
-          value: AppController.instance.isDarkTheme,
-          onChanged: (value) {
-            AppController.instance.changeTheme();
-          }
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children:  [
+            const DrawerHeader(
+              decoration: BoxDecoration(color: Colors.red),
+              child: Text(
+                "Menu",
+                style: TextStyle(fontSize: 24.0),
+              ),
+            ),
+            ListTile(
+              leading: const  Icon(Icons.home),
+              title: const Text("Inicio"),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: const  Icon(Icons.settings),
+              title: const Text("Configurações"),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            )
+          ],
         ),
       ),
 
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Clicou: $counter",
+              style: const TextStyle(fontSize: 20.0),
+            ),
+            ElevatedButton(
+              onPressed: ()  {
+                setState(() {
+                  counter = 0;
+                });
+              },
+              child: const Icon(Icons.clear)
+            ),
+          ],
+          
+          
+        ),
+      ),
 
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
@@ -41,6 +94,7 @@ class HomePageState extends State<HomePage> {
           });
         }
       ),
+
 
     );
   }
