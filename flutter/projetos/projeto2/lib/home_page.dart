@@ -25,7 +25,12 @@ class HomePageState extends State<HomePage> {
           AnimatedBuilder(
           animation: AppController.instance,
           builder:(context, child) {
-            return const CustomSwitch();
+            return Switch(
+              value: AppController.instance.isDarkTheme, 
+              onChanged: (value) {
+                AppController.instance.changeTheme();
+              }
+            );
           }),
         ],
       ),
@@ -91,20 +96,6 @@ class HomePageState extends State<HomePage> {
       ),
 
 
-    );
-  }
-}
-
-class CustomSwitch extends StatelessWidget {
-  const CustomSwitch({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Switch(
-      value: AppController.instance.isDarkTheme,
-      onChanged: (value) {
-        AppController.instance.changeTheme();
-      }
     );
   }
 }
