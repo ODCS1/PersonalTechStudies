@@ -1,20 +1,64 @@
+#version: '3.8'
+#
+#services:
+#  account-database:
+#    container_name: jupyter
+#    image: mysql:latest
+#    environment:
+#      MYSQL_DATABASE: account
+#      MYSQL_USER: root
+#      MYSQL_PASSWORD: abc123
+#    ports:
+#      - 3306:3306
+#    expose:
+#      - 3306
+#
+#
+#  account-service:
+#    build: .
+#    container_name: marte
+#    image: account:latest
+#    environment:
+#      MYSQL_HOST: jupyter
+#      MYSQL_PORT: 3306
+#      MYSQL_DATABASE: account
+#      MYSQL_USER: root
+#      MYSQL_PASSWORD: abc123
+#
+#    ports:
+#      - 8080:8080
+#    expose:
+#      - 8080
+#    networks:
+#      - account-private-network
+#
+#    depends_on:
+#      - account-database
+#
+#networks:
+#  account-private-network:
+#    name: account-private-network
+#    driver: bridge
+
+
+version: '3.8'
+
 services:
   account-database:
     container_name: jupyter
-    image: mysql:latest
+    image: mysql:8.0.33
     environment:
       MYSQL_DATABASE: account
-      MY_USER: root
-      MYSQL_ROOT_PASSWORD: abc123
+      MYSQL_USER: root
+      MYSQL_PASSWORD: abc123
+      MYSQL_ROOT_PASSWORD: abc123 # Necessário para criar root corretamente
     ports:
-      - 3306:3306
-    expose:
-      - 3306
+      - "3306:3306"
 
   account-service:
     build: .
     container_name: marte
-    image: account:latest
+    image: account:1.0
     environment:
       MYSQL_HOST: jupyter
       MYSQL_PORT: 3306
@@ -22,9 +66,7 @@ services:
       MYSQL_USER: root
       MYSQL_PASSWORD: abc123
     ports:
-      - 8080:8080
-    expose:
-      - 8080
+      - "8080:8080"
     networks:
       - account-private-network
     depends_on:
@@ -32,5 +74,5 @@ services:
 
 networks:
   account-private-network:
-    name: account-private-network
     driver: bridge
+
