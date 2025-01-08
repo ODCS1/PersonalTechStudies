@@ -31,7 +31,8 @@ const translations = {
 console.log(translations["hello"] + ", " + translations["world"] + "!");
 // 6 - METHODS IN OBJECTS
 /**
- * OBJECTS CAN ALSO CONTAIN FUNCTIONS AS PROPERTIES, KNOWN AS ETHODS.
+ * OBJECTS CAN ALSO CONTAIN FUNCTIONS AS PROPERTIES, KNOWN AS
+ * MWTHODS
  */
 const calculator = {
     add: (a, b) => a + b,
@@ -39,7 +40,7 @@ const calculator = {
         return a - b;
     },
 };
-console.log(`SUM: ${calculator.add} - SUB: ${calculator.subtract}`);
+console.log(`SUM: ${calculator.add(1, 2)} - SUB: ${calculator.subtract(4, 1)}`);
 const dog1 = {
     name: "Buddy",
     breed: "Pincher",
