@@ -16,17 +16,41 @@
         p{
             text-align: center;
         }
+        div#principal-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        div#principal-container img {
+            width: 400px;
+            height: auto;
+            padding: 20px;
+        }
     </style>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>desafio008</title>
 </head>
 <body>
     <h1>Vídeos legais para assistir</h1>
-    <p>
-        <a href="html5.html" target="_self" rel="next"><img src="thumb-html.png" alt="Thumb vídeo de html5"></a>
-        <a href="javascript.html" target="_self" rel="next"><img src="thumb-js.png" alt="Thumb vídeo de JavaScrip"></a> <br>
-        <a href="hardware.html" target="_self" rel="next"><img src="thumb-hardware.png" alt="Thumb vídeo de hardware"></a>
-        <a href="python.html" target="_self" rel="next"><img src="thumb-python.png" alt="Thumb vídeo de Python"></a>
-    </p>
+    <div id="principal-container">
+        <div>
+            <a href="html5.html" target="_self" rel="next">
+                <img src="thumb-html.png" alt="Thumb vídeo de html5">
+            </a>
+            <a href="javascript.html" target="_self" rel="next">
+                <img src="thumb-js.png" alt="Thumb vídeo de JavaScrip">
+            </a>
+        </div>
+        <div>
+            <a href="hardware.html" target="_self" rel="next">
+                <img src="thumb-hardware.png" alt="Thumb vídeo de hardware">
+            </a>
+            <a href="python.html" target="_self" rel="next">
+                <img src="thumb-python.png" alt="Thumb vídeo de Python">
+            </a>
+        </div>
+    </div>
 </body>
 </html>
