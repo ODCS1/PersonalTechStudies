@@ -1,4 +1,4 @@
-// Exercise 15: Type Aliases
+// Exercise 13: Type Aliases
 // Objective: Create custom types using type and use them in your code.
 
 type ex13_stringOrNumber = string | number;
