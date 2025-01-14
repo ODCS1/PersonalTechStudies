@@ -23,6 +23,8 @@ export default class FullList implements List {
 
     load(): void {
         const storedList: string | null = localStorage.getItem("myList");
+
+
         if (typeof storedList !== "string") return;
 
         const parsedList: { _id: string, _item: string, _checked: boolean }[] = JSON.parse(storedList);
@@ -63,5 +65,16 @@ export default class FullList implements List {
         // this._list = this._list.filter(item => item.id !== id);
 
         this.save();
+    }
+
+    existsItemName(newName: string): boolean {
+        for (let i = 0; i < this._list.length; i++) {
+            let currName:string = this._list[i].item;
+            if (currName === newName) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
