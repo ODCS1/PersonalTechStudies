@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import "../index.css";
 
 interface User {
   id: number;
@@ -38,12 +39,16 @@ const Lesson = () => {
     <div
       style={{
         marginBottom: "30px",
-        borderBottom: "1px solid black",
+        borderBottom: "5px solid black",
         padding: "20px",
         textAlign: "center",
       }}
       className="App"
     >
+      <div>
+        <h1>HOOKS</h1>
+        <h2 style={{color:"gray"}}>useState - useEffect - useCallBack - useMemo - useRef</h2>
+      </div>
       <h1>{count}</h1>
       <button onClick={addTwo}>Add</button>
       <h2>{result}</h2>
