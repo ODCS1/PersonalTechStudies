@@ -16,7 +16,7 @@ module.exports = {
   },
   devServer: {
     // BEFORE WebPack Dev Server 5
-    contentBase: path.resolve(__dirname, 'public'),
+    // contentBase: path.resolve(__dirname, 'public'),
     static: {
       directory: path.resolve(__dirname, "dist"),
     },
