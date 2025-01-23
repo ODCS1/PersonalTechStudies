@@ -1,5 +1,13 @@
 import React, { useState } from "react";
 
+/**
+ * IMMUTABLE STATE ENSURES React WORKS EFFICIENTLY AND PREDICTABLY
+ * 
+ * users = ['awg', 'ehw', 'jug'];
+ * newUsers = [...users, 'hje'];
+ * 
+ */
+
 const Counter = () => {
     const [count, setCount] = useState(0);
 
