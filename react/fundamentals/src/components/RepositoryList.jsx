@@ -1,4 +1,5 @@
-import '../styles/global.scss'
+import '../styles/global.scss';
+import '../styles/repositories.scss';
 import RepositoryItem from './RepositoryItem';
 
 const repository1 = {
