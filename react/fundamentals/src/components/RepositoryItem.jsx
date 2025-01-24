@@ -5,7 +5,7 @@ const RepositoryItem = (props) => {
     <li>
         <strong>{props.repository?.name ?? "Default"}</strong>
         <p>{props.repository?.description ?? "Description"}</p>
-        <a rel="external" href={props.repository?.link ?? "#"}>
+        <a rel="external" href={props.repository?.html_url ?? "#"}>
             Acess
         </a>
     </li>
