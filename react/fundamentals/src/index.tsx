@@ -7,6 +7,6 @@ import { App } from "./App";
 // render(<h1>Hello, World!</h1>, document.getElementById("root"));
 
 // THIS IS CONCURRENT RENDERING IN REACT 18.
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 
 root.render(<App />);
