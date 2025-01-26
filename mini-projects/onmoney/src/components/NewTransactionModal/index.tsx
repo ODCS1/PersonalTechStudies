@@ -3,7 +3,7 @@ import { Container, TransactionTypeContainer, RadioBox } from "./styles";
 import closeSvg from "../../assets/close.svg";
 import incomeSvg from "../../assets/income.svg";
 import outcomeSvg from "../../assets/outcome.svg";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 
 Modal.setAppElement("#root");
 
@@ -14,7 +14,21 @@ type newTransactionModalProps = {
 }
 
 export function NewTransactionModal ({ isOpen, onRequestClose }: newTransactionModalProps) {
+  const [title, setTitle] = useState('');
+  const [value, setValue] = useState(0);
+  const [category, setCategory] = useState('');
   const [type, setType] = useState('deposit');
+
+  function handleCreateNewTransaction(event: FormEvent) {
+    event.preventDefault();
+
+    console.log({
+      title,
+      value,
+      category,
+      type
+    });
+  }
 
   return (
     <Modal
@@ -26,14 +40,24 @@ export function NewTransactionModal ({ isOpen, onRequestClose }: newTransactionM
         <button type="button" className="react-modal-close">
             <img src={closeSvg} alt="Close modal" onClick={onRequestClose} />
         </button>
-        <Container>
+        <Container onSubmit={handleCreateNewTransaction}>
           <h2>Register Transaction</h2>
-          <input placeholder="Title"/>
-          <input type="number" placeholder="Value" />
+          <input 
+            placeholder="Title"
+            value={title}
+            onChange={event => setTitle(event.target.value)}
+          />
+          <input 
+            type="number" 
+            placeholder="Value"
+            value={value}
+            onChange={event => setValue(Number(event.target.value))}
+          />
 
           <TransactionTypeContainer>
             <RadioBox
-              isActive={type === 'deposit'}
+              $isActive={type === 'deposit'}
+              $activeColor={"green"}
               type="button"
               onClick={() => { setType('deposit'); }}
             >
@@ -42,7 +66,9 @@ export function NewTransactionModal ({ isOpen, onRequestClose }: newTransactionM
             </RadioBox>
 
             <RadioBox
-              isActive={type === 'withdraw'}
+              $isActive={type === 'withdraw'}
+              $activeColor={"red"}
+              accessKey=""
               type="button"
               onClick={() => { setType('withdraw'); }}
             >
@@ -51,7 +77,11 @@ export function NewTransactionModal ({ isOpen, onRequestClose }: newTransactionM
             </RadioBox>
           </TransactionTypeContainer>
 
-          <input placeholder="Category" />
+          <input 
+            placeholder="Category" 
+            value={category}
+            onChange={event => setCategory(event.target.value)}
+          />
           <button type="submit">Register</button>
         </Container>
     </Modal>
