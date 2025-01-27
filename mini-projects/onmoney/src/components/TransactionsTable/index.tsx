@@ -3,18 +3,8 @@ import { Container } from "./style";
 import { TransactionsContext } from "../../TransactionsContext";
 
 
-type TransactionType = {
-  id: number;
-  title: string;
-  amount: number;
-  type: string;
-  category: string;
-  createdAt: string;
-}
-
-
 export function TransactionsTable() {
-  const transactions = useContext(TransactionsContext);
+  const { transactions } = useContext(TransactionsContext);
   // const [transactions, setTransactions] = useState<TransactionType[]>([]);
   
   //   useEffect(() => {

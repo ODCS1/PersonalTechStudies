@@ -6,9 +6,23 @@ import { TransactionsContext } from "../../TransactionsContext";
 import { useContext } from "react";
 
 export function Summary() {
-    const transactions = useContext(TransactionsContext);
+    const { transactions } = useContext(TransactionsContext);
 
-    console.log(transactions);
+    // CALCULATE TOTAL TRANSACTION VALUES
+    const summary = transactions.reduce((acc, transaction) => {
+        if (transaction.type ===  'deposit') {
+            acc.totalIncome += transaction.amount;
+            acc.totalBalance += transaction.amount;
+        } else {
+            acc.totalOutcome += transaction.amount;
+            acc.totalBalance -= transaction.amount;
+        }
+        return acc;
+    }, {
+        totalIncome: 0,
+        totalOutcome: 0,
+        totalBalance: 0
+    }); 
 
     return (
         <Container>
@@ -26,21 +40,36 @@ export function Summary() {
                     <p>Incomes</p>
                     <img src={incomeImg} alt="Incomes" />
                 </header>
-                <strong>$ 1000.00</strong>
+                <strong>
+                    {new Intl.NumberFormat('english', { 
+                        style: 'currency', 
+                        currency: 'USD' 
+                    }).format(summary.totalIncome)}
+                </strong>
             </div>
             <div>
                 <header>
                     <p>Outcomes</p>
                     <img src={outcomeImg} alt="Outcomes" />
                 </header>
-                <strong>- $500.00</strong>
+                <strong>-
+                    {new Intl.NumberFormat('english', { 
+                        style: 'currency', 
+                        currency: 'USD' 
+                    }).format(summary.totalOutcome)}
+                </strong>
             </div>
             <div className="highlight-background">
                 <header>
                     <p>Total</p>
                     <img src={totalImg} alt="Total" />
                 </header>
-                <strong>$ 500.00</strong>
+                <strong>
+                    {new Intl.NumberFormat('english', { 
+                        style: 'currency', 
+                        currency: 'USD' 
+                    }).format(summary.totalBalance)}
+                </strong>
             </div>
         </Container>
     );
