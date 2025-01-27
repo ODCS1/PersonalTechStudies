@@ -6,11 +6,13 @@ import { TransactionsContext } from "../../TransactionsContext";
 import { useContext } from "react";
 
 export function Summary() {
-    const data = useContext(TransactionsContext);
+    const transactions = useContext(TransactionsContext);
+
+    console.log(transactions);
 
     return (
         <Container>
-            // OLD API USAGE FOR CONTEXT DATA
+            {/* OLD API USAGE FOR CONTEXT DATA */}
             {/* <TransactionsContext.Consumer>
                 {(data) => {
                     console.log(data)
@@ -24,21 +26,21 @@ export function Summary() {
                     <p>Incomes</p>
                     <img src={incomeImg} alt="Incomes" />
                 </header>
-                <strong>R$1000,00</strong>
+                <strong>$ 1000.00</strong>
             </div>
             <div>
                 <header>
                     <p>Outcomes</p>
                     <img src={outcomeImg} alt="Outcomes" />
                 </header>
-                <strong>- R$500,00</strong>
+                <strong>- $500.00</strong>
             </div>
             <div className="highlight-background">
                 <header>
                     <p>Total</p>
                     <img src={totalImg} alt="Total" />
                 </header>
-                <strong>R$500,00</strong>
+                <strong>$ 500.00</strong>
             </div>
         </Container>
     );

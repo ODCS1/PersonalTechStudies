@@ -1,6 +1,5 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { Container } from "./style";
-import { api } from "../../services/api";
 import { TransactionsContext } from "../../TransactionsContext";
 
 
@@ -15,13 +14,13 @@ type TransactionType = {
 
 
 export function TransactionsTable() {
-  const data = useContext(TransactionsContext);
-  const [transactions, setTransactions] = useState<TransactionType[]>([]);
+  const transactions = useContext(TransactionsContext);
+  // const [transactions, setTransactions] = useState<TransactionType[]>([]);
   
-    useEffect(() => {
-        api.get('/transactions')
-        .then(response => setTransactions(response.data.transactions));
-    }, []);
+  //   useEffect(() => {
+  //       api.get('/transactions')
+  //       .then(response => setTransactions(response.data.transactions));
+  //   }, []);
 
     return (
     <Container>
@@ -55,30 +54,6 @@ export function TransactionsTable() {
               </td>
             </tr>
           ))}
-          {/* <tr>
-            <td>Website development</td>
-            <td className="deposit">$2000.00</td>
-            <td>Sale</td>
-            <td>01/01/2025</td>
-          </tr> */}
-          {/* <tr>
-                    <td>Hamburger</td>
-                    <td>- $59.00</td>
-                    <td>Food</td>
-                    <td>01/01/2025</td>
-                </tr> */}
-          {/* <tr>
-            <td>Apartment rental</td>
-            <td className="withdraw">- $1200.00</td>
-            <td>Home</td>
-            <td>03/01/2022</td>
-          </tr> */}
-          {/* <tr>
-                    <td>Computer</td>
-                    <td>R$12000.00</td>
-                    <td>Sale</td>
-                    <td>03/01/2022</td>
-                </tr> */}
         </tbody>
       </table>
     </Container>
