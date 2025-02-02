@@ -1,6 +1,6 @@
+import { supabase } from "../../../services/supabase";
 import NextAuth from "next-auth";
 import GitHubProvider from "next-auth/providers/github";
-import { queryFauna } from "../../../services/fauna";
 
 export default NextAuth({
   providers: [
@@ -15,33 +15,43 @@ export default NextAuth({
 
   callbacks: {
     async signIn({ user }) {
-      try {
-        const email = user.email;
+      const email = user.email;
 
-        if (!email) {
-          console.error("No email found in user profile");
+      if (!email) {
+        console.error("No email found in user profile");
+        return false;
+      }
+
+      // Verifica se o e-mail já existe na tabela 'users'
+      const { data: existingUser, error: selectError } = await supabase
+        .from('users')
+        .select('email')
+        .eq('email', email)
+        .single();
+
+      if (selectError && selectError.code !== 'PGRST116') {
+        // PGRST116 INDICATES THAT NO USER WAS FOUND, WHICH IS EXPECTED IF IT'S A NEW USER
+        console.error("Error checking existing user:", selectError);
+        return false;
+      }
+
+      if (!existingUser) {
+        // IF THE USER DOES NOT EXIST, INSERT INTO THE DATABASE 
+        const { error: insertError } = await supabase
+          .from('users')
+          .insert([{ email }]);
+
+        if (insertError) {
+          console.error("Error inserting user into Supabase:", insertError);
           return false;
         }
 
-        const query = `
-          let userMatch = Match(Index("user_by_email"), "${email}")
-          let userExists = Exists(userMatch)
-
-          if (userExists) {
-            Get(userMatch)
-          } else {
-            Create(Collection("users"), { email: "${email}" })
-          }
-        `;
-
-        const userDoc = await queryFauna<{ email: string }>(query);
-        console.log("User document from Fauna:", userDoc);
-
-        return true;
-      } catch (error) {
-        console.error("Could not sign in:", error);
-        return false;
+        console.log("User successfully inserted into Supabase.");
+      } else {
+        console.log("User already exists in Supabase.");
       }
-    }
-  }
+
+      return true; // ALLOWS LOGIN IN NEXTAUTH 
+    },
+  },
 });
