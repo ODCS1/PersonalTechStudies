@@ -45,7 +45,6 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const product = {
     priceId: price.id,
-    amount2: price.unit_amount as number / 100,
     amount: new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
