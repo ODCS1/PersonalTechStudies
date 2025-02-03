@@ -21,7 +21,7 @@ export default async(req: NextApiRequest, res: NextApiResponse) => {
             payment_method_types: ['card'],
             line_items: [
                 {
-                    price: req.body.priceId,
+                    price: 'price_1Qn6GOEXsfTMCeUSVXokw9tW',
                     quantity: 1,
                 },
             ],
