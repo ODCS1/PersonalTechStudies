@@ -22,7 +22,6 @@ export default NextAuth({
         return false;
       }
 
-      // Verifica se o e-mail já existe na tabela 'users'
       const { data: existingUser, error: selectError } = await supabase
         .from('users')
         .select('email')
@@ -45,10 +44,6 @@ export default NextAuth({
           console.error("Error inserting user into Supabase:", insertError);
           return false;
         }
-
-        console.log("User successfully inserted into Supabase.");
-      } else {
-        console.log("User already exists in Supabase.");
       }
 
       return true; // ALLOWS LOGIN IN NEXTAUTH 

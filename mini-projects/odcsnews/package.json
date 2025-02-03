@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.48.1",
-    "fauna": "^2.4.1",
     "next": "^15.1.6",
     "next-auth": "^4.24.11",
     "react": "^19.0.0",
